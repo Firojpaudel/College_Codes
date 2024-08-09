@@ -1,6 +1,6 @@
-// Design a DFA that accepts the string ending with "bb" over the alphabet {a,b}
+// Design a DFA that accepts the string which has number of 'a' twice than the number of 'b' over the alphabet {a,b}
 
-#include <iostream>
+#include <iostream> 
 #include <string>
 
 using namespace std;
@@ -20,10 +20,19 @@ int main() {
         }
     }
 
-    // Check if the string ends with "bb"
-    bool endsWithBB = validString && userString.length() >= 2 && userString.substr(userString.length() - 2) == "bb";
+    // Check if the string has number of 'a' twice than the number of 'b'
+    int countA = 0, countB = 0;
+    for (char c : userString) {
+        if (c == 'a') {
+            countA++;
+        } else if (c == 'b') {
+            countB++;
+        }
+    }
 
-    if (endsWithBB) {
+    bool hasTwiceAsManyAs = validString && countA == 2 * countB;
+
+    if (hasTwiceAsManyAs) {
         cout << "String is accepted." << endl;
     } else {
         cout << "String is not accepted." << endl;
