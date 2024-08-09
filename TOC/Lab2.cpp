@@ -11,19 +11,11 @@ int main() {
     cout << "Enter a string: ";
     cin >> usersString;
 
-    // Check if the user input string contains only 'a' and 'b' characters and if it contains the substring "aaabbb"
-    bool validString = true;
-    for (char c : usersString) {
-        if (c != 'a' && c != 'b') {
-            validString = false;
-            break;
-        }
-    }
-
-    if (validString && usersString.find("aaabbb") != -1) {
-        cout << "YES\n";
+    // Check if the user input string is exactly "aaabbb"
+    if (usersString == "aaabbb") {
+        cout << "Accepted\n";
     } else {
-        cout << "NO\n";
+        cout << "Rejected\n";
     }
 
     return 0;
