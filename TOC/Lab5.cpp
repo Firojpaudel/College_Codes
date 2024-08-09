@@ -1,4 +1,4 @@
-// Design a DFA that accepts the string starting with "aa" over the alphabet {a,b}
+// Design a DFA that accepts substring "aa" over the alphabet {a,b}
 
 #include <iostream>
 #include <string>
@@ -20,13 +20,19 @@ int main() {
         }
     }
 
-    // Check if the string starts with "aa"
-    bool startsWithAA = validString && userString.substr(0, 2) == "aa";
+    // Check if the string contains "aa"
+    bool containsAA = false;
+    for (int i = 0; i < userString.length() - 1; i++) {
+        if (userString[i] == 'a' && userString[i + 1] == 'a') {
+            containsAA = true;
+            break;
+        }
+    }
 
-    if (startsWithAA) {
+    if (containsAA) {
         cout << "String is accepted." << endl;
     } else {
-        cout << "String Rejected!" << endl;
+        cout << "String is not accepted." << endl;
     }
 
     return 0;
