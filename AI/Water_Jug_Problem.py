@@ -52,3 +52,6 @@ steps_table = water_jug_problem(capacity_A, capacity_B, target)
 print("{:<15} {:<15} {:<20}".format('Gallons in A', 'Gallons in B', 'Rule Applied'))
 for step in steps_table:
     print("{:<15} {:<15} {:<20}".format(step['Gallons in A'], step['Gallons in B'], step['Rule Applied']))
+
+
+# Hope it works now ...
