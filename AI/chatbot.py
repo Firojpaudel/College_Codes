@@ -22,7 +22,7 @@ def get_response(user_input):
     return responses.get(user_input, "Sorry, I didn't understand that.")
 
 def chat():
-    print("Welcome to the chatbot! Type 'bye' to end the chat.\n\n")
+    print("Welcome to the chatbot! Type 'bye' to end the chat.\n")
     while True:
         user_input = input("You: ")
         response = get_response(user_input)
