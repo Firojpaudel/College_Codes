@@ -37,6 +37,12 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 1: Data Representation](./CA/BinaryNumber.cpp)
 - [Lab Report 2: Overflow Checker](./CA/Overflow.cpp)
 - [Lab Report 3: Booth's Algorithm](./CA/Booths_Algo.cpp.cpp)
+- [Lab report 4: 3to8Decoder](./CA/3to8Decoder)
+- [Lab report 5: 4 Bit Parallel Adder](./CA/4_Bit_Parallel_Adder)
+- [Lab report 6: 4 to 1 MUX](./CA/4to1Mux)
+- [Lab report 7: 8 to 3 Encoder](./CA/8to3Encoder)
+- [Lab report 8: Full Adder](./CA/Full_Adder)
+- [Lab report 9: Pipeline](./CA/Pipeline)
 
 ### 3. Numerical Methods
 
