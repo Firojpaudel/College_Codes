@@ -4,6 +4,15 @@ This repository contains lab reports for various subjects as part of the college
 
 ## Subjects
 
+### 1. Artificial Intelligence
+- [Lab report 1: ChatBot (Rule Based)](./AI/chatbot.py)
+- [Lab report 2: Tower Of Hanoi Implementation](./AI/Tower_of_hanoi.py)
+- [Lab report 3: Water Jug Problem Implementation](./AI/Water_Jug_Problem.py)
+- [Lab report 4: Breadth First Search](./AI/BFS.py)
+- [Lab report 5: Depth First Search](./AI/DFS.py)
+- [Lab report 6: Best First Search](./AI/BestFirstSearch.py)
+- [Lab report 7: A* Searching Algorithm implementation](./AI/A_star.py)
+
 ### 1. Data Structures and Algorithms
 
 - [Lab Report 1: Memory Allocation](./DSA/Lab1.cpp)
@@ -55,6 +64,8 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 4: Bresenham's Line Algorithm (Negative Slope) ](./CG/BLA_Negative_Slope.cpp) 
 - [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
 - [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
+
+
 
 
 ## How to Use
