@@ -13,7 +13,28 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab report 6: Best First Search](./AI/BestFirstSearch.py)
 - [Lab report 7: A* Searching Algorithm implementation](./AI/A_star.py)
 
-### 1. Data Structures and Algorithms
+### 2. Computer Architecture
+
+- [Lab Report 1: Data Representation](./CA/BinaryNumber.cpp)
+- [Lab Report 2: Overflow Checker](./CA/Overflow.cpp)
+- [Lab Report 3: Booth's Algorithm](./CA/Booths_Algo.cpp.cpp)
+- [Lab report 4: 3to8Decoder](./CA/3to8Decoder)
+- [Lab report 5: 4 Bit Parallel Adder](./CA/4_Bit_Parallel_Adder)
+- [Lab report 6: 4 to 1 MUX](./CA/4to1Mux)
+- [Lab report 7: 8 to 3 Encoder](./CA/8to3Encoder)
+- [Lab report 8: Full Adder](./CA/Full_Adder)
+- [Lab report 9: Pipeline](./CA/Pipeline)
+
+### 3. Computer Graphics
+
+- [Lab Report 1: Digital Differential Algorithm (Positive Slope) ](./CG/DDA_Positive_Slope.cpp)
+- [Lab Report 2: Digital Differential Algorithm (Negative Slope) ](./CG/DDA_Negative_Slope.cpp)
+- [Lab Report 3: Bresenham's Line Algorithm (Positive Slope) ](./CG/BLA_Positive_Slope.cpp)
+- [Lab Report 4: Bresenham's Line Algorithm (Negative Slope) ](./CG/BLA_Negative_Slope.cpp) 
+- [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
+- [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
+
+### 4. Data Structures and Algorithms
 
 - [Lab Report 1: Memory Allocation](./DSA/Lab1.cpp)
 - [Lab Report 2: Stack Implementation](./DSA/Lab2.cpp)
@@ -31,20 +52,7 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 14: Quick Sort Algorithm](./DSA/Lab14.cpp)
 - [Lab Report 15: Merge Sort Algorithm](./DSA/Lab15.cpp)
 
-
-### 2. Computer Architecture
-
-- [Lab Report 1: Data Representation](./CA/BinaryNumber.cpp)
-- [Lab Report 2: Overflow Checker](./CA/Overflow.cpp)
-- [Lab Report 3: Booth's Algorithm](./CA/Booths_Algo.cpp.cpp)
-- [Lab report 4: 3to8Decoder](./CA/3to8Decoder)
-- [Lab report 5: 4 Bit Parallel Adder](./CA/4_Bit_Parallel_Adder)
-- [Lab report 6: 4 to 1 MUX](./CA/4to1Mux)
-- [Lab report 7: 8 to 3 Encoder](./CA/8to3Encoder)
-- [Lab report 8: Full Adder](./CA/Full_Adder)
-- [Lab report 9: Pipeline](./CA/Pipeline)
-
-### 3. Numerical Methods
+### 5. Numerical Methods
 
 - [Lab Report 1: Bisection Method](./NM/BisectionMethod.c)
 - [Lab Report 2: Newton - Raphson Method](./NM/Newton.c)
@@ -62,21 +70,28 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 13: Simpson's 3/8 Rule](./NM/Simpsons3_8.c)
 - [Lab Report 14: Trapezoidal Rule](./NM/Trapezoidal.c)
 
-### 4. Computer Graphics
+### 6. Operating Systems
+- [Lab Report 1: First In First out (FIFO)](./OS/FIFO.cpp)
+- [Lab Report 2: Least Recently Used (LRU)](./OS/LRU.cpp)
+- [Lab Report 3: Optimal Page Replacement (OPR)](./OS/OPR.cpp)
 
-- [Lab Report 1: Digital Differential Algorithm (Positive Slope) ](./CG/DDA_Positive_Slope.cpp)
-- [Lab Report 2: Digital Differential Algorithm (Negative Slope) ](./CG/DDA_Negative_Slope.cpp)
-- [Lab Report 3: Bresenham's Line Algorithm (Positive Slope) ](./CG/BLA_Positive_Slope.cpp)
-- [Lab Report 4: Bresenham's Line Algorithm (Negative Slope) ](./CG/BLA_Negative_Slope.cpp) 
-- [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
-- [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
+### 7. Stats_2nd
+- [Lab Guide 1: Lab Guide 1](./Stats_2/stats%20practical.pdf)
+- [Lab Guide 2: Lab Guide 2](./Stats_2/stats%20practical2.pdf)
 
-
-
+### 8. Theory Of Computation
+- [Lab Report 1: DFA design that accepts only "0010"](./TOC/Lab1.cpp)
+- [Lab Report 2: DFA design that accepts only "aaabbb"](./TOC/Lab2.cpp)
+- [Lab Report 3: DFA design that accepts string starting with "aa"](./TOC/Lab3.cpp)
+- [Lab Report 4: DFA design that accepts string ending with "bb"](./TOC/Lab4.cpp)
+- [Lab Report 5: DFA design that accepts substring "aa"](./TOC/Lab5.cpp)
+- [Lab Report 6: DFA design that contains odd numer of 1's](./TOC/Lab6.cpp)
+- [Lab Report 7: DFA design that accepts string that starts with "a" and ends with "bb"](./TOC/Lab7.cpp)
+- [Lab Report 8: DFA design that accepts string which has number of "a" twice than "b"](./TOC/Lab8.cpp)
 
 ## How to Use
    >*Clone the repository to your local machine*
 
    ```bash
-   git clone https://github.com/Firojpaudel/College.git
+   git clone https://github.com/Firojpaudel/College_Codes.git
    ```
