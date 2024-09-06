@@ -43,7 +43,7 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 6: 2D Transformations ](./DBMS/lab_report_6_qn_solution.sql)
 - [Lab Report 6: 2D Transformations ](./DBMS/lab_report_7_qn_solution.sql)
 
-### 4. Data Structures and Algorithms
+### 5. Data Structures and Algorithms
 
 - [Lab Report 1: Memory Allocation](./DSA/Lab1.cpp)
 - [Lab Report 2: Stack Implementation](./DSA/Lab2.cpp)
@@ -61,7 +61,7 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 14: Quick Sort Algorithm](./DSA/Lab14.cpp)
 - [Lab Report 15: Merge Sort Algorithm](./DSA/Lab15.cpp)
 
-### 5. Numerical Methods
+### 6. Numerical Methods
 
 - [Lab Report 1: Bisection Method](./NM/BisectionMethod.c)
 - [Lab Report 2: Newton - Raphson Method](./NM/Newton.c)
@@ -78,16 +78,16 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 13: Simpson's 3/8 Rule](./NM/Simpsons3_8.c)
 - [Lab Report 14: Trapezoidal Rule](./NM/Trapezoidal.c)
 
-### 6. Operating Systems
+### 7. Operating Systems
 - [Lab Report 1: First In First out (FIFO)](./OS/FIFO.cpp)
 - [Lab Report 2: Least Recently Used (LRU)](./OS/LRU.cpp)
 - [Lab Report 3: Optimal Page Replacement (OPR)](./OS/OPR.cpp)
 
-### 7. Stats_2nd
+### 8. Stats_2nd
 - [Lab Guide 1: Lab Guide 1](./Stats_2/stats%20practical.pdf)
 - [Lab Guide 2: Lab Guide 2](./Stats_2/stats%20practical2.pdf)
 
-### 8. Theory Of Computation
+### 9. Theory Of Computation
 - [Lab Report 1: DFA design that accepts only "0010"](./TOC/Lab1.cpp)
 - [Lab Report 2: DFA design that accepts only "aaabbb"](./TOC/Lab2.cpp)
 - [Lab Report 3: DFA design that accepts string starting with "aa"](./TOC/Lab3.cpp)
