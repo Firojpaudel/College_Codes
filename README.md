@@ -34,6 +34,15 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
 - [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
 
+### 4. Database Management System
+- [Lab Report 1: DDL Commands](./DBMS/DDL_commands.sql)
+- [Lab Report 2: Digital Differential Algorithm (Negative Slope) ](./DBMS/unions_and_intersections.sql)
+- [Lab Report 3: Bresenham's Line Algorithm (Positive Slope) ](./DBMS/joining_tables_using_simple_join.sql)
+- [Lab Report 4: Bresenham's Line Algorithm (Negative Slope) ](./DBMS/cartesian_product.sql) 
+- [Lab Report 5: Midpoint Circle Algorithm ](./DBMS/lab_report_5_qn_solution.sql)
+- [Lab Report 6: 2D Transformations ](./DBMS/lab_report_6_qn_solution.sql)
+- [Lab Report 6: 2D Transformations ](./DBMS/lab_report_7_qn_solution.sql)
+
 ### 4. Data Structures and Algorithms
 
 - [Lab Report 1: Memory Allocation](./DSA/Lab1.cpp)
@@ -61,7 +70,6 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 5: Lagrange Interpolation](./NM/Lagrange.c)
 - [Lab Report 6: Newton Divided Difference Interpolation](./NM/Divided_difference.c)
 - [Lab Report 7: Newton Forward Difference Interpolation](./NM/Newton_forward.c)
-<!-- - [Lab Report 8: Newton Backward Difference Interpolation](./NM/Divided_difference.c) -->
 - [Lab Report 8: Linear Regression](./NM/Linear_regression.c)
 - [Lab Report 9: Forward Difference](./NM/Forward_difference.c)
 - [Lab Report 10: Backward Difference](./NM/Backward_difference.c)
