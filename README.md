@@ -36,12 +36,12 @@ This repository contains lab reports for various subjects as part of the college
 
 ### 4. Database Management System
 - [Lab Report 1: DDL Commands](./DBMS/DDL_commands.sql)
-- [Lab Report 2: Digital Differential Algorithm (Negative Slope) ](./DBMS/unions_and_intersections.sql)
-- [Lab Report 3: Bresenham's Line Algorithm (Positive Slope) ](./DBMS/joining_tables_using_simple_join.sql)
-- [Lab Report 4: Bresenham's Line Algorithm (Negative Slope) ](./DBMS/cartesian_product.sql) 
-- [Lab Report 5: Midpoint Circle Algorithm ](./DBMS/lab_report_5_qn_solution.sql)
-- [Lab Report 6: 2D Transformations ](./DBMS/lab_report_6_qn_solution.sql)
-- [Lab Report 6: 2D Transformations ](./DBMS/lab_report_7_qn_solution.sql)
+- [Lab Report 2: unions_and_intersections ](./DBMS/unions_and_intersections.sql)
+- [Lab Report 3: joining_tables_using_simple_join](./DBMS/joining_tables_using_simple_join.sql)
+- [Lab Report 4: cartesian_product ](./DBMS/cartesian_product.sql) 
+- [Lab Report 5: lab_report_5_qn_solution](./DBMS/lab_report_5_qn_solution.sql)
+- [Lab Report 6: lab_report_6_qn_solution](./DBMS/lab_report_6_qn_solution.sql)
+- [Lab Report 6: lab_report_7_qn_solution](./DBMS/lab_report_7_qn_solution.sql)
 
 ### 5. Data Structures and Algorithms
 
