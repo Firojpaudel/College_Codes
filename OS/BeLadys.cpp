@@ -16,7 +16,10 @@ void printFrames(int frames[], int frameSize)
 
 int pageFaultsFIFO(int pages[], int numPages, int frameSize)
 {
-    int frames[MAX_PAGES] = {-1}; // Initialize frames to -1 (empty)
+    int frames[MAX_PAGES]; // Initialize frames array
+    for (int i = 0; i < frameSize; i++) // Ensure all elements are set to -1
+        frames[i] = -1;
+
     int pageFaults = 0;
     int nextFrame = 0;
 
@@ -37,7 +40,8 @@ int pageFaultsFIFO(int pages[], int numPages, int frameSize)
         // If page not found, we need to replace a page
         if (!pageFound)
         {
-            frames[nextFrame] = pages[i]; // Replace the oldest page
+            // Replace the oldest page (FIFO)
+            frames[nextFrame] = pages[i]; // Place the new page
             nextFrame = (nextFrame + 1) % frameSize; // Move to the next frame
             pageFaults++; // Increment page fault count
         }
