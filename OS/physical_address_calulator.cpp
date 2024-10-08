@@ -2,28 +2,35 @@
 
 #define MAX_SEGMENTS 100
 
-struct Segment {
+struct Segment
+{
     int segmentNumber;
     int base;
     int limit;
 };
 
-void displaySegmentTable(struct Segment segments[], int segmentCount) {
+void displaySegmentTable(struct Segment segments[], int segmentCount)
+{
     printf("\n+--------------------------------------------------+\n");
     printf("|                 Segment Table                    |\n");
     printf("+--------------------------------------------------+\n");
     printf("| Segment No | Base Address | Limit                |\n");
     printf("+------------+--------------+----------------------+\n");
-    for (int i = 0; i < segmentCount; i++) {
+    for (int i = 0; i < segmentCount; i++)
+    {
         printf("|     %4d   |    %6d   |      %6d           |\n", segments[i].segmentNumber, segments[i].base, segments[i].limit);
     }
     printf("+------------+--------------+----------------------+\n");
 }
 
-void calculatePhysicalAddress(struct Segment segments[], int segmentCount, int segNo, int logicalAddr) {
-    for (int i = 0; i < segmentCount; i++) {
-        if (segments[i].segmentNumber == segNo) {
-            if (logicalAddr < segments[i].limit) {
+void calculatePhysicalAddress(struct Segment segments[], int segmentCount, int segNo, int logicalAddr)
+{
+    for (int i = 0; i < segmentCount; i++)
+    {
+        if (segments[i].segmentNumber == segNo)
+        {
+            if (logicalAddr < segments[i].limit)
+            {
                 int physicalAddress = segments[i].base + logicalAddr;
                 printf("\n+--------------------------------------------------+\n");
                 printf("|             Physical Address Calculation         |\n");
@@ -32,7 +39,9 @@ void calculatePhysicalAddress(struct Segment segments[], int segmentCount, int s
                 printf("+------------+-----------------+-------------------+\n");
                 printf("|     %4d   |       %6d    |       %6d      |\n", segNo, logicalAddr, physicalAddress);
                 printf("+------------+-----------------+-------------------+\n");
-            } else {
+            }
+            else
+            {
                 printf("Error: Logical address exceeds the segment limit!\n");
             }
             return;
@@ -41,7 +50,8 @@ void calculatePhysicalAddress(struct Segment segments[], int segmentCount, int s
     printf("Error: Segment not found!\n");
 }
 
-int main() {
+int main()
+{
     int segmentCount, segNo, logicalAddr;
     struct Segment segments[MAX_SEGMENTS];
 
@@ -54,7 +64,8 @@ int main() {
     scanf("%d", &segmentCount);
 
     // Input details for each segment
-    for (int i = 0; i < segmentCount; i++) {
+    for (int i = 0; i < segmentCount; i++)
+    {
         printf("Enter details for segment %d:\n", i + 1);
         printf("  Segment No: ");
         scanf("%d", &segments[i].segmentNumber);
