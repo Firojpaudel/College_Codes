@@ -82,6 +82,18 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab Report 1: First In First out (FIFO)](./OS/FIFO.cpp)
 - [Lab Report 2: Least Recently Used (LRU)](./OS/LRU.cpp)
 - [Lab Report 3: Optimal Page Replacement (OPR)](./OS/OPR.cpp)
+- [Lab Report 4: Best Fit Memory Allocation](./OS/best_fit_mem_allocate.cpp)
+- [Lab Report 5: Worst Fit Memory Allocation](./OS/worst_fit_mem_allocate.cpp)
+- [Lab Report 6: First Fit Memory Allocation](./OS/first_fit_mem_allocate.cpp)
+- [Lab Report 7: Belady's Anomaly](./OS/BeLadys.cpp)
+- [Lab Report 8: FCFS: Calulations](./OS/Calculation_FCFS.cpp)
+- [Lab Report 9: SJF: Calulations](./OS/Calculation_SJF.cpp)
+- [Lab Report 10: RR: Calulations](./OS/Calculation_RR.cpp)
+- [Lab Report 11: Priority Scheduling: Calulations](./OS/Calculation_priority.cpp)
+- [Lab Report 12: FCFS: Seek_Time and Total Number Of Tracks](./OS/seek_total_FCFS.cpp)
+- [Lab Report 13: SCAN: Seek_Time and Total Number Of Tracks](./OS/seek_total_scan.cpp)
+- [Lab Report 14: C-LOOK: Seek_Time and Total Number Of Tracks](./OS/seek_total_clook.cpp)
+- [Lab Report 15: Physical Address Calculator for User Input logical and Segment Number](./OS/physical_address_calulator.cpp)
 
 ### 8. Stats_2nd
 - [Lab Guide 1: Lab Guide 1](./Stats_2/stats%20practical.pdf)
