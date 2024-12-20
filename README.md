@@ -113,6 +113,9 @@ This repository contains lab report codes for CSIT curriculum.
 - [Lab Report 6: DFA design that contains odd numer of 1's](./TOC/Lab6.cpp)
 - [Lab Report 7: DFA design that accepts string that starts with "a" and ends with "bb"](./TOC/Lab7.cpp)
 - [Lab Report 8: DFA design that accepts string which has number of "a" twice than "b"](./TOC/Lab8.cpp)
+- [Lab Report 9: NFA design that accepts language L = {w | w has substring 01 and ends with 1}](./TOC/Lab9.cpp)
+- [Lab Report 10: Constructing a PDA that accepts string over Σ ={a,b} that contains equal number of a’s followed by equal number of b’s](./TOC/Lab10.cpp)
+- [Lab Report 11: Constructing a TM for simulating a function f(x) = 2x for x = {1}](./TOC/Lab11.cpp)
 
 ## How to Use
    >*Clone the repository to your local machine*
@@ -120,3 +123,4 @@ This repository contains lab report codes for CSIT curriculum.
    ```bash
    git clone https://github.com/Firojpaudel/College_Codes.git
    ```
+
