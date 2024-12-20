@@ -1,6 +1,7 @@
 '''
-    This code is for the Expert System of the Medical Diagnosis System. Not part of practicals.
+    This code is for the Expert System of the Medical Diagnosis System.
 '''
+##@ Author: Firoj Paudel
 
 class ExpertSystem:
     def __init__(self):
