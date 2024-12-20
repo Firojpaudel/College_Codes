@@ -43,10 +43,10 @@ int main() {
     cin >> input;
 
     // Validate input: only '1's are allowed
-    for (char c : input) {
-        if (c != '1') {
+    for (int i = 0; i < input.length(); ++i) {  
+        if (input[i] != '1') {  // Check the character at the current index
             cout << "Invalid input. Please enter a string containing only '1's." << endl;
-            return 1;
+            return 1;  // Exit with error code 1
         }
     }
 
