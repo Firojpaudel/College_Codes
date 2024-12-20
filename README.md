@@ -1,6 +1,8 @@
 # College Lab Reports Repository
 
-This repository contains lab reports for various subjects as part of the college curriculum. The lab reports cover topics such as Data Structures and Algorithms, Computer Architecture, Numerical Methods, and Computer Graphics.
+This repository contains lab report codes for CSIT curriculum. 
+
+> Sadly, earlier semesters codes are not here 🫡
 
 ## Subjects
 
@@ -12,6 +14,9 @@ This repository contains lab reports for various subjects as part of the college
 - [Lab report 5: Depth First Search](./AI/DFS.py)
 - [Lab report 6: Best First Search](./AI/BestFirstSearch.py)
 - [Lab report 7: A* Searching Algorithm implementation](./AI/A_star.py)
+- [Lab report 8: Naïve Bayes using course example](./AI/naivebayes.py)
+- [Lab report 9: Expert System for Medical Diagnosis](./AI/MedicalExpertSys.py)
+- [Lab report 10: BackPropagation Implementation and predicting the XOR gate](./AI/backpropagation.py)
 
 ### 2. Computer Architecture
 
