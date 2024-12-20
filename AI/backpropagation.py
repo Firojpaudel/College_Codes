@@ -76,7 +76,7 @@ def train_NN(X, y, epochs, alpha):
         bias_hidden1 += np.sum(d_hidden1,axis=0,keepdims=True) * alpha
         
         ##@ Log details for every 1000 epochs
-        if epoch % 1000 == 0:
+        if epoch % 3000 == 0:
             print(f"Epoch {epoch}: Error: {np.mean(np.abs(E))}")
     
     return weights_input_hidden1, weights_hidden1_hidden2, weights_hidden2_output, \
@@ -126,10 +126,3 @@ print("\nBiases (Hidden Layer 2):")
 print(bias_hidden2)
 print("\nBiases (Output Layer):")
 print(bias_output)
-
-
-  
-        
-    
-    
-    
