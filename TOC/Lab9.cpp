@@ -1,3 +1,6 @@
+/*
+    Design a NFA that accepts the language L = {w | w has substring 01 and ends with 1}.
+*/
 #include <iostream>
 #include <string>
 using namespace std;
