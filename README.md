@@ -39,7 +39,10 @@ This repository contains lab report codes for CSIT curriculum.
 - [Lab Report 5: Midpoint Circle Algorithm ](./CG/Circle.cpp)
 - [Lab Report 6: 2D Transformations ](./CG/2D_Transform.cpp)
 
-### 4. Database Management System
+### 4. Computer Network
+- [Lab Report File](./CN/Computer%20Network%20Labs.pdf)
+
+### 5. Database Management System
 - [Lab Report 1: DDL Commands](./DBMS/DDL_commands.sql)
 - [Lab Report 2: unions_and_intersections ](./DBMS/unions_and_intersections.sql)
 - [Lab Report 3: joining_tables_using_simple_join](./DBMS/joining_tables_using_simple_join.sql)
@@ -48,7 +51,7 @@ This repository contains lab report codes for CSIT curriculum.
 - [Lab Report 6: lab_report_6_qn_solution](./DBMS/lab_report_6_qn_solution.sql)
 - [Lab Report 7: lab_report_7_qn_solution](./DBMS/lab_report_7_qn_solution.sql)
 
-### 5. Data Structures and Algorithms
+### 6. Data Structures and Algorithms
 
 - [Lab Report 1: Memory Allocation](./DSA/Lab1.cpp)
 - [Lab Report 2: Stack Implementation](./DSA/Lab2.cpp)
@@ -66,7 +69,7 @@ This repository contains lab report codes for CSIT curriculum.
 - [Lab Report 14: Quick Sort Algorithm](./DSA/Lab14.cpp)
 - [Lab Report 15: Merge Sort Algorithm](./DSA/Lab15.cpp)
 
-### 6. Numerical Methods
+### 7. Numerical Methods
 
 - [Lab Report 1: Bisection Method](./NM/BisectionMethod.c)
 - [Lab Report 2: Newton - Raphson Method](./NM/Newton.c)
@@ -83,7 +86,7 @@ This repository contains lab report codes for CSIT curriculum.
 - [Lab Report 13: Simpson's 3/8 Rule](./NM/Simpsons3_8.c)
 - [Lab Report 14: Trapezoidal Rule](./NM/Trapezoidal.c)
 
-### 7. Operating Systems
+### 8. Operating Systems
 - [Lab Report 1: First In First out (FIFO)](./OS/FIFO.cpp)
 - [Lab Report 2: Least Recently Used (LRU)](./OS/LRU.cpp)
 - [Lab Report 3: Optimal Page Replacement (OPR)](./OS/OPR.cpp)
@@ -100,11 +103,11 @@ This repository contains lab report codes for CSIT curriculum.
 - [Lab Report 14: C-LOOK: Seek_Time and Total Number Of Tracks](./OS/seek_total_clook.cpp)
 - [Lab Report 15: Physical Address Calculator for User Input logical and Segment Number](./OS/physical_address_calulator.cpp)
 
-### 8. Stats_2nd
+### 9. Stats_2nd
 - [Lab Guide 1: Lab Guide 1](./Stats_2/stats%20practical.pdf)
 - [Lab Guide 2: Lab Guide 2](./Stats_2/stats%20practical2.pdf)
 
-### 9. Theory Of Computation
+### 10. Theory Of Computation
 - [Lab Report 1: DFA design that accepts only "0010"](./TOC/Lab1.cpp)
 - [Lab Report 2: DFA design that accepts only "aaabbb"](./TOC/Lab2.cpp)
 - [Lab Report 3: DFA design that accepts string starting with "aa"](./TOC/Lab3.cpp)
