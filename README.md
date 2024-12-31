@@ -50,6 +50,7 @@ This repository contains lab report codes for CSIT curriculum.
 - [Lab Report 5: lab_report_5_qn_solution](./DBMS/lab_report_5_qn_solution.sql)
 - [Lab Report 6: lab_report_6_qn_solution](./DBMS/lab_report_6_qn_solution.sql)
 - [Lab Report 7: lab_report_7_qn_solution](./DBMS/lab_report_7_qn_solution.sql)
+- [Lab Report 8: Transaction_solution](./DBMS/txn.sql)
 
 ### 6. Data Structures and Algorithms
 
