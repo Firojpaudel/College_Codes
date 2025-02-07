@@ -1,0 +1,27 @@
+/*The universal selector; common on all*/
+*{
+    margin: 0px auto;
+}
+
+.header{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.content{
+    padding: 270px;
+    height: 100px;
+    background-color:cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
