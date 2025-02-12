@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    height: 100vh; /* Ensure the body takes the full height of the viewport */
+}
+
+.main {
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Clears floated elements */
+}
+
+.one, .two, .three, .four, .five {
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.one {
+    background-color: #f1c40f;
+    width: 100%;
+    text-align: center;
+}
+
+.five {
+    background-color: #f39c12;
+    width: 15%;
+    height: 48vh;
+    float: left;
+    text-align: left;
+}
+
+.three {
+    background-color: #3498db;
+    width: 15%;
+    height: 48vh;
+    float: right;
+    text-align: right;
+}
+
+.two {
+    background-color: #e74c3c;
+    height: 48vh;
+    width: 68%; /* Adjust width dynamically */
+    float: left;
+    margin-right: 1%;
+    margin-left: 1%; /* Space between .five and .two */
+}
+
+
+.two .two_a, .two .two_b {
+    background-color: #ecf0f1;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 48%;
+    float: left;
+    height: 42vh;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.two .two_b {
+    margin-right: 0; /* Remove margin from the last floated element */
+}
+
+.four {
+    background-color: #2ecc71;
+    text-align: center;
+    clear: both; /* Ensure it moves below floated elements */
+    width: 100%;
+}
