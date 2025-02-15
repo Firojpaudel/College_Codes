@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 08: Minimal Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Day_08.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../images/day_08.png" alt="Logo">
+        </div>
+        
+        <div class="nav-links">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#services" class="nav-item">Services</a>
+            
+            <div class="dropdown">
+                <a href="#about" class="nav-item">About</a>
+                <div class="dropdown-content">
+                    <a href="#team">Team</a>
+                    <a href="#history">History</a>
+                    <a href="#values">Values</a>
+                </div>
+            </div>
+            
+            <a href="#contact" class="nav-item">Contact</a>
+        </div>
+
+        <div class="auth-buttons">
+            <a href="#login" class="auth-button login">Login</a>
+            <a href="#signup" class="auth-button signup">Sign Up</a>
+        </div>
+    </nav>
+</body>
+</html>
