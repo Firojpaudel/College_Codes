@@ -128,3 +128,111 @@ div {
 }
 ```
 This moves the element by `(50px, 100px)`, rotates it by `45°`, and scales it by `1.5x`.
+
+#### Qn 3. What is CSS-3 animation? Demonstrate it by dragging a box in any one direction.
+
+***Answer:***
+
+**What is CSS3 Animation?**: CSS3 animations allow you to animate HTML elements without using JavaScript or Flash. They are defined using the `@keyframes` rule, which specifies the changes in CSS properties at different points in time (keyframes). These animations can be controlled with properties like `animation-name`, `animation-duration`, `animation-iteration-count`, and more.
+
+Animations are more flexible than transitions because they allow for multi-step animations and greater control over timing.
+
+  *Example*: Dragging a box in 1 direction 
+  ```html 
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Example</title>
+    <style>
+      /* Keyframes for moving the box */
+      @keyframes moveRight {
+        from {
+          transform: translateX(0); /* Start at original position */
+        }
+        to {
+          transform: translateX(300px); /* Move 300px to the right */
+        }
+      }
+
+      /* Styling the box */
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        position: relative; /* Required for transform to work */
+        animation-name: moveRight; /* Link to keyframes */
+        animation-duration: 2s; /* Animation lasts for 2 seconds */
+        animation-timing-function: ease-in-out; /* Smooth movement */
+        animation-fill-mode: forwards; /* Keeps the box at the end position */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+  </html>
+  ```
+
+#### Qn 4. Show the use of active, focus and hover effects.
+
+***Answer:*** 
+
+**CSS Pseudo-Classes: Active, Focus, and Hover**
+
+CSS provides pseudo-classes like `:hover`, `:focus`, and `:active` to style elements based on user interactions. Here's a brief explanation of each:
+
+1. `:hover`: Applies styles when the user hovers over an element with a mouse.
+
+2. `:focus`: Applies styles to an element that has received focus, typically through keyboard navigation or mouse click (e.g., form inputs).
+
+3. `:active`: Applies styles to an element when it is being clicked or activated.
+
+*Example Code*
+
+Below is an example demonstrating the use of `:hover`, `:focus`, and `:active` effects on a button:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Pseudo-Classes</title>
+  <style>
+    /* Default button styles */
+    button {
+      background-color: lightblue;
+      color: black;
+      border: 2px solid blue;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease; /* Smooth transitions for hover/focus/active */
+    }
+
+    /* Hover effect */
+    button:hover {
+      background-color: blue;
+      color: white;
+    }
+
+    /* Focus effect */
+    button:focus {
+      outline: none; /* Removes default browser outline */
+      border-color: green;
+      box-shadow: 0 0 5px green; /* Adds a glowing effect */
+    }
+
+    /* Active effect */
+    button:active {
+      background-color: darkblue;
+      transform: scale(0.95); /* Slightly shrinks the button when clicked */
+    }
+  </style>
+</head>
+<body>
+  <button>Interact with Me!</button>
+</body>
+</html>
+```
