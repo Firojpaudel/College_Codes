@@ -236,3 +236,100 @@ Below is an example demonstrating the use of `:hover`, `:focus`, and `:active` e
 </body>
 </html>
 ```
+
+#### Qn 5. Using CSS, draw the following objects:
+  - Triangle
+  - Circle
+  - Oval
+  - Triangle upon rectangle
+  - Two circles joint together _(X-axis)_
+
+***Answer:***
+- Triangle:
+```html 
+<div class="triangle"></div>
+
+<style>
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red; /* Triangle color */
+}
+</style>
+```
+
+- Circle
+```html 
+<div class="circle"></div>
+
+<style>
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: blue; /* Circle color */
+  border-radius: 50%;
+}
+</style>
+```
+- Oval
+```html
+<div class="oval"></div>
+
+<style>
+.oval {
+  width: 150px;
+  height: 100px;
+  background-color: green; /* Oval color */
+  border-radius: 50%;
+}
+</style>
+```
+- Triangle Upon Rectangle
+
+```html
+<div class="triangle-up"></div>
+<div class="rectangle"></div>
+
+<style>
+.rectangle {
+  width: 100px;
+  height: 50px;
+  background-color: orange; /* Rectangle color */
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid red; /* Triangle color */
+  margin-bottom: -1px; /* Adjusts the position to overlap with the rectangle */
+}
+</style>
+```
+- Two Circles Joint Together *(X-Axis)*
+```html 
+<div class="circle1"></div>
+<div class="circle2"></div>
+
+<style>
+.circle1, .circle2 {
+  width: 50px;
+  height: 50px;
+  background-color: purple; /* Circle color */
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: -4px; /* Adjusts the margin to make circles touch */
+}
+</style>
+```
+
+#### Qn. 6 Design the following looking template:
+<div align="center">
+    <img src="../Images/assignment_Qn06.png" width="450px">
+</div>
+
+**Answer**:
+  {Will do later on !! }
