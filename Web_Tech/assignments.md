@@ -17,6 +17,6 @@
 
 6. Design the following template:
     <div align="center">
-        <img src="./images/assignment_Qn06.png" width="450px">
+        <img src="./Classworks_folder/images/assignment_Qn06.png" width="450px">
     </div>
 
