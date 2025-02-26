@@ -1,4 +1,4 @@
-### Assignment 01
+### Assignment 02
 
 1. What is CSS Media Query? Show the use of maxwidth & minwidth properties.
 
