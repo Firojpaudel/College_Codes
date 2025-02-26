@@ -332,4 +332,4 @@ Below is an example demonstrating the use of `:hover`, `:focus`, and `:active` e
 </div>
 
 **Answer**:
-  {Will do later on !! }
+  [Click Here](../HTML/assignment02_qn6.html)to redirect towards the HTML file.
