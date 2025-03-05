@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10: First JS</title>
+</head>
+<body>
+    <h2>Classwork: Creating a Simple Calculator using JS:</h2>
+    <script>
+        console.log("Designing a Simple Calculator: ");
+        document.addEventListener("DOMContentLoaded", function() {
+            var o = prompt("Enter the operation:");
+            var e = parseFloat(prompt("Enter the first value: "));
+            var f = parseFloat(prompt("Enter the second value: "));
+            var out;
+
+            if (o == "+") {
+                out = e + f;
+                window.alert("The sum is: " + out);
+                document.write("The sum of"+ e+ "and"+ f+ "is: " + out);
+            }
+            else if (o == "-") {
+                out = e - f;
+                window.alert("The difference is: " + out);
+                document.write("The difference of"+ e + "and"+ f + "is: " + out);
+            }
+            else if (o == "*") {
+                out = e * f;
+                window.alert("The product is: " + out);
+                document.write("The product of"+ e + "and"+ f + "is: " + out);
+            }
+            else if (o == "/") {
+                out = e / f;
+                window.alert("The quotient is: " + out);
+                document.write("The quotient of"+ e + "and"+ f + "is: " + out);
+            }
+        });
+    </script>
+</body>
+</html>
