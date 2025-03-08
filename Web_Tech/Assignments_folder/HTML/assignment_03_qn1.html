@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_03: Qn 1</title>
+</head>
+<body>
+    <h4>Greatest Number Finder</h4>
+    <div id="result"></div>
+
+  <script>
+        // Function to find the greatest number among three input numbers 
+        function findGreatest(n1, n2, n3){
+            if (n1>= n2 && n1>=n3){
+                return n1;
+            }
+            else if (n2>=n1 && n2>=n3){
+                return n2;
+            }
+            else{
+                return n3;
+            }
+        }
+
+        // Asking for userinputs:
+        let number1 = parseFloat(prompt("Enter the first number: "));
+        let number2 = parseFloat(prompt("Enter the second number: "));
+        let number3 = parseFloat(prompt("Enter the third number: "));
+
+        //Function call and Print
+        const greatestNumber = findGreatest(number1, number2, number3);
+
+        // Get a reference to the result div
+        const resultDiv = document.getElementById("result");
+
+        // Display the result on the page
+        resultDiv.textContent = "Greatest number between " + number1 + ", " + number2 + " and " + number3 + " is: " + greatestNumber;
+
+    </script>
+</body>
+</html>  
