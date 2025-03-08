@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_03: Qn 3</title>
+</head>
+<body>
+    <h4>Series Generation (8, 9, 64, 25...)</h4>
+    <div id="result"></div>
+    <script>
+        function generateSeries(n) {
+            const series = [];
+            let evenNum = 2; // Start with the first even number for cubing
+            let oddNum = 3;  // Start with the first odd number for squaring
+
+            for (let i = 0; i < n; i++) {
+                if (i % 2 === 0) {
+                    series.push(Math.pow(evenNum, 3));
+                    evenNum += 2; 
+                } else {
+                    series.push(Math.pow(oddNum, 2));
+                    oddNum += 2; 
+                }
+            }
+            return series;
+        }
+
+        const numberOfTerms = 10; 
+        const mySeries = generateSeries(numberOfTerms);
+
+        console.log("Series (" + numberOfTerms + " terms):");
+        console.log(mySeries);
+        alert("Series (" + numberOfTerms + " terms): " + mySeries);
+
+        const resultDiv = document.getElementById("result");
+        resultDiv.textContent = "Series (" + numberOfTerms + " terms): " + mySeries;
+    </script>
+</body>
+</html>
