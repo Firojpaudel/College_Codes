@@ -1,21 +1,32 @@
 ### Write Js programs for the following:
 
 #### Qn 1. Find greatest among three numbers
+
 ***Solution***:
 > [Click Here](../HTML/assignment_03_qn1.html) to redirect to the answer!
 
 #### Qn 2. Print the fibonacci series:
 $$0, 1, 1, 2, 3, 5, 8, ... 15^\text{th} \text{terms}$$
+
 ***Solution***:
 > [Click Here](../HTML/assignment_03_qn2.html) to redirect to the answer!
 
 #### Qn 3. Print the series: 
 $$8, 9, 64, 25 ... 10^\text{th} \text{terms}$$
+
 ***Solution***:
 > [Click Here](../HTML/assignment_03_qn3.html) to redirect to the answer!
 
 #### Qn 4. In an input array of $10$ numbers, find their sum.
+
+***Solution***:
+> [Click Here](../HTML/assignment_03_qn4.html) to redirect to the answer!
+
 #### Qn 5. Input two arrays containing first names and surnames in each array. Print the full name.
+
+***Solution***:
+> [Click Here](../HTML/assignment_03_qn5.html) to redirect to the answer!
+
 #### Qn 6. Create `avg()` function that finds mean of three input arguments, then `avg1()` function calculates mean of four values. Create `agg()` function that finds the product of two functions.
 #### Qn 7. Create menu driven program simulating a calculator, where we can input four choices for arithmetic operations *(add, subs, mul, div)*. Input two numbers for the operation.
 #### Qn 8. Check if the number is prime or composite.

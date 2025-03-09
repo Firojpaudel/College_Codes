@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_03: Qn 5</title>
+</head>
+<body>
+    <h4>Concatinating strings:</h4>
+    <div id="result"></div>
+    <script>
+        //Function to concatenate the strings
+        function concatenateString(firstName, lastName){
+            // Converting arrays back to string format
+            let fullFirstName = firstName.join('');
+            let fullLastName = lastName.join('');
+
+            let fullName = fullFirstName + " " + fullLastName;
+            return fullName;
+        }
+
+        //Function for user input:
+        function getUserInput(){
+            let firstNameInput = prompt("Enter your first name:");
+            let lastNameInput = prompt("Enter your last name:");
+            
+            let firstName = [];
+            let lastName = [];
+
+            //Push elements into the array:
+            for (let i =0; i<firstNameInput.length; i++){
+                firstName.push(firstNameInput[i]);
+            }
+            for (let i =0; i<lastNameInput.length; i++){
+                lastName.push(lastNameInput[i]);
+            }
+
+            //Function Call
+            let fullName = concatenateString(firstName, lastName);
+            
+            const resultDiv = document.getElementById("result");
+            resultDiv.textContent = "Concatenated String: " + fullName;
+        }
+
+        //Function call to call the getUserInput function
+        getUserInput();
+    </script>
+</body>
+</html>
