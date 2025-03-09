@@ -1,4 +1,4 @@
-### Write Js programs for the following:
+### Write Js programs for the following: *(Assignment_03)*
 
 #### Qn 1. Find greatest among three numbers
 
@@ -28,9 +28,25 @@ $$8, 9, 64, 25 ... 10^\text{th} \text{terms}$$
 > [Click Here](../HTML/assignment_03_qn5.html) to redirect to the answer!
 
 #### Qn 6. Create `avg()` function that finds mean of three input arguments, then `avg1()` function calculates mean of four values. Create `agg()` function that finds the product of two functions.
+
+***Solution***:
+> [Click Here](../HTML/assignment_03_qn6.html) to redirect to the answer!
+
 #### Qn 7. Create menu driven program simulating a calculator, where we can input four choices for arithmetic operations *(add, subs, mul, div)*. Input two numbers for the operation.
+
+***Solution***:
+> [Click Here](../HTML/assignment_03_qn7.html) to redirect to the answer!
+
 #### Qn 8. Check if the number is prime or composite.
+
+***Solution***:
+> [Click Here](../HTML/assignment_03_qn8.html) to redirect to the answer!
+
 #### Qn 9. Find the first 50 prime numbers.
+
+***Solution***:
+> [Click Here](../HTML/assignment_03_qn9.html) to redirect to the answer!
+
 #### Qn 10. Here is the income tax rates of Internal Revenue Department if Nepal.
 - less than $5,00,000 \longrightarrow 1\% \space \text{tax} \space (< 6,00,000 \space \text{for female and married individuals})$
 - $5,00,000 \space \text{to} \space 8,00,000 \longrightarrow 1\% \space \text{on upto} \space 5,00,000 \space \text{and} \space 10\% \space \text{extra on remaining}\\ \space \text{(female and married conditions apply for 1,00,000 added on minimum taxable amount)}$
@@ -38,3 +54,5 @@ $$8, 9, 64, 25 ... 10^\text{th} \text{terms}$$
 - $15,00,000 \space \text{to} \space 24,00,000 \longrightarrow \text{as per above for upto} \space 15 \space \text{lakh,} \space 30\% \space \text{for} \space 15 \space \text{to} \space 24 \space \text{lakhs.}$
 - $24,00,000 \space \text{and above} \longrightarrow \text{as per above upto} \space 24 \space \text{lakhs,} \space 39\% \space \text{for remaining.}$
 
+***Solution***:
+> [Click Here](../HTML/assignment_03_qn10.html) to redirect to the answer!

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_03: Qn7</title>
+</head>
+<body>
+    <h4>Calculator:</h4>
+    <div id="result"></div>
+    <script>
+        //Function for calculator
+        function calculator(operation, num1, num2){
+            let output = 0;
+            switch(operation){
+                case '+':
+                    output = num1 + num2;
+                    break;
+                case '-':
+                    output = num1 - num2;
+                    break;
+                case '*':
+                    output = numb1 * num2;
+                    break;
+                case '/':
+                    output = num1 / num2;
+                    break;
+            }
+            return output;
+        }
+
+        alert("Running Calculator App!");
+        let op = prompt("Enter the operation (+, -, *, /):");
+        let num1 = parseFloat(prompt("Enter  the first number: "));
+        let num2 = parseFloat(prompt("Enter the second number:"));
+
+        // Function calling :) 
+        const output = document.getElementById("result");
+        
+        output.textContent = "Operation "+ op + " on numbers "+ num1 +" and "+num2+" is "+ calculator(op, num1, num2);
+    </script>
+</body>
+</html>
