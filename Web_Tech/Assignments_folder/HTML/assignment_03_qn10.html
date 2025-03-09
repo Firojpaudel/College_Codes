@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 03: Qn 10</title>
+    <style>
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            max-width: 600px;
+            font-family: Arial, sans-serif;
+        }
+        .tax-breakdown {
+            margin: 10px 0;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 15px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h4>Income Tax Calculator:</h4>
+    <div id="results"></div>
+    <script>
+        // Alert user when the app starts
+        alert("Income Tax Calculator is running...");
+
+        // Function to calculate tax
+        function calculateTax() {
+            // Get user inputs
+            let isFemaleOrMarried = confirm("Are you female or married? (Press OK for Yes, Cancel for No)");
+            let income = parseInt(prompt("Please enter your annual income in NPR:"));
+            
+            if (isNaN(income) || income < 0) {
+                alert("Please enter a valid income amount!");
+                return;
+            }
+
+            let tax = 0;
+            let breakdown = [];
+            const baseLimit = isFemaleOrMarried ? 600000 : 500000;
+            const secondTier = 800000;
+            const thirdTier = 1500000;
+            const fourthTier = 2400000;
+
+            // Tax calculation logic
+            if (income <= baseLimit) {
+                tax = income * 0.01;
+                breakdown.push(`1% on ${income.toLocaleString()} = ${(tax).toLocaleString()}`);
+            } 
+            else if (income <= secondTier) {
+                let firstSlab = baseLimit * 0.01;
+                let remaining = income - baseLimit;
+                let secondSlab = remaining * 0.10;
+                tax = firstSlab + secondSlab;
+                breakdown.push(`1% on ${baseLimit.toLocaleString()} = ${firstSlab.toLocaleString()}`);
+                breakdown.push(`10% on ${remaining.toLocaleString()} = ${secondSlab.toLocaleString()}`);
+            } 
+            else if (income <= thirdTier) {
+                let firstSlab = baseLimit * 0.01;
+                let secondSlab = (secondTier - baseLimit) * 0.10;
+                let remaining = income - secondTier;
+                let thirdSlab = remaining * 0.20;
+                tax = firstSlab + secondSlab + thirdSlab;
+                breakdown.push(`1% on ${baseLimit.toLocaleString()} = ${firstSlab.toLocaleString()}`);
+                breakdown.push(`10% on ${(secondTier - baseLimit).toLocaleString()} = ${secondSlab.toLocaleString()}`);
+                breakdown.push(`20% on ${remaining.toLocaleString()} = ${thirdSlab.toLocaleString()}`);
+            } 
+            else if (income <= fourthTier) {
+                let firstSlab = baseLimit * 0.01;
+                let secondSlab = (secondTier - baseLimit) * 0.10;
+                let thirdSlab = (thirdTier - secondTier) * 0.20;
+                let remaining = income - thirdTier;
+                let fourthSlab = remaining * 0.30;
+                tax = firstSlab + secondSlab + thirdSlab + fourthSlab;
+                breakdown.push(`1% on ${baseLimit.toLocaleString()} = ${firstSlab.toLocaleString()}`);
+                breakdown.push(`10% on ${(secondTier - baseLimit).toLocaleString()} = ${secondSlab.toLocaleString()}`);
+                breakdown.push(`20% on ${(thirdTier - secondTier).toLocaleString()} = ${thirdSlab.toLocaleString()}`);
+                breakdown.push(`30% on ${remaining.toLocaleString()} = ${fourthSlab.toLocaleString()}`);
+            } 
+            else {
+                let firstSlab = baseLimit * 0.01;
+                let secondSlab = (secondTier - baseLimit) * 0.10;
+                let thirdSlab = (thirdTier - secondTier) * 0.20;
+                let fourthSlab = (fourthTier - thirdTier) * 0.30;
+                let remaining = income - fourthTier;
+                let fifthSlab = remaining * 0.39;
+                tax = firstSlab + secondSlab + thirdSlab + fourthSlab + fifthSlab;
+                breakdown.push(`1% on ${baseLimit.toLocaleString()} = ${firstSlab.toLocaleString()}`);
+                breakdown.push(`10% on ${(secondTier - baseLimit).toLocaleString()} = ${secondSlab.toLocaleString()}`);
+                breakdown.push(`20% on ${(thirdTier - secondTier).toLocaleString()} = ${thirdSlab.toLocaleString()}`);
+                breakdown.push(`30% on ${(fourthTier - thirdTier).toLocaleString()} = ${fourthSlab.toLocaleString()}`);
+                breakdown.push(`39% on ${remaining.toLocaleString()} = ${fifthSlab.toLocaleString()}`);
+            }
+
+            // Display results
+            let resultDiv = document.getElementById("results");
+            let status = isFemaleOrMarried ? "Female/Married" : "Male/Unmarried";
+            let html = `
+                <div class="tax-breakdown">
+                    <strong>Tax Payer Status:</strong> ${status}<br>
+                    <strong>Total Income:</strong> NPR ${income.toLocaleString()}<br>
+                    <strong>Tax Breakdown:</strong><br>
+                    ${breakdown.join("<br>")}
+                    <div class="total">Total Tax Payable: NPR ${tax.toLocaleString()}</div>
+                </div>
+            `;
+            resultDiv.innerHTML = html;
+
+            // Ask if user wants to calculate again
+            let calculateAgain = confirm("Do you want to calculate tax for another income?");
+            if (calculateAgain) {
+                calculateTax();
+            }
+        }
+
+        calculateTax();
+    </script>
+</body>
+</html>

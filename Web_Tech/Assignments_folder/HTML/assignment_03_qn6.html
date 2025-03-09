@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_03: Qn 6</title>
+</head>
+<body>
+    <h4>Means and Products:</h4>
+    <div id="average"></div>
+    <div id="average1"></div>
+    <div id="product"></div>
+    <script>
+        //Function avg as mentioned
+        function avg(n1, n2, n3){
+            return (n1 + n2 + n3) / 3.0;
+        }
+
+        //Function avg1 as mentioned
+        function avg1(n1, n2, n3, n4){
+            return (n1 + n2 + n3 + n4) / 4.0;
+        }
+
+        //Function agg as mentioned
+        function agg(n1, n2){
+            return n1 * n2;
+        }
+        
+        //Calling the avg function 
+        alert("Executing the avg function:")
+        let number1= parseFloat(prompt("Enter your first number"));
+        let number2= parseFloat(prompt("Enter your second number"));
+        let number3= parseFloat(prompt("Enter your third number"));
+        
+
+        const average = document.getElementById("average");
+
+        average.textContent = "Output of avg function for numbers:" + number1 + ", " + number2 + " and " + number3 + " is: " + avg(number1, number2, number3);
+
+        //Calling the avg1 function
+        alert("Executing the avg1 function:")
+        let number4= parseFloat(prompt("Enter your first number"));
+        let number5= parseFloat(prompt("Enter your second number"));
+        let number6= parseFloat(prompt("Enter your third number"));
+        let number7= parseFloat(prompt("Enter your fourth number"));
+
+        const average1 = document.getElementById("average1");
+        average1.textContent = "Output of avg1 function for numbers:" + number4 + ", " + number5 + ", " + number6 + " and " + number7 + " is: " + avg1(number4, number5, number6, number7);
+
+        //Calling the agg function
+        alert("Executing the agg function:")
+        let number8= parseFloat(prompt("Enter your first number"));
+        let number9= parseFloat(prompt("Enter your second number"));
+
+        const product = document.getElementById("product");
+        product.textContent = "Output of agg function for numbers:" + number8 + " and " + number9 + " is: " + agg(number8, number9);
+    </script>
+</body>
+</html>
