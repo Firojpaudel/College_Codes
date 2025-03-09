@@ -49,18 +49,18 @@ $$8, 9, 64, 25 ... 10^\text{th} \text{terms}$$
 
 #### Qn 10. Here is the income tax rates of Internal Revenue Department of Nepal.
 
-- less than $5,00,000 \longrightarrow 1\%$ tax $ (< 6,00,000$ for female and married individuals$)$
-- $5,00,000$ to $8,00,000 \longrightarrow 1\%$ on up to $5,00,000$ and $10\%$ extra on remaining  
+- less than $5,00,000 \longrightarrow 1$% tax $(< 6,00,000$ for female and married individuals$)$
+- $5,00,000$ to $8,00,000 \longrightarrow 1$% on up to $5,00,000$ and $10$% extra on remaining  
   (female and married conditions apply for $1,00,000$ added on minimum taxable amount)
 - $8,00,000$ to $15,00,000 \longrightarrow$  
-  up to $5$ lakhs: $1\%$,  
-  $5$ to $8$ lakhs: $10\%$,  
-  $8$ to $15$ lakh: $20\%$  
+  up to $5$ lakhs: $1$%,  
+  $5$ to $8$ lakhs: $10$%,  
+  $8$ to $15$ lakh: $20$%  
   (female and married conditions apply as above)
 - $15,00,000$ to $24,00,000 \longrightarrow$  
-  as per above for up to $15$ lakh, $30\%$ for $15$ to $24$ lakhs.
+  as per above for up to $15$ lakh, $30$% for $15$ to $24$ lakhs.
 - $24,00,000$ and above $\longrightarrow$  
-  as per above up to $24$ lakhs, $39\%$ for remaining.
+  as per above up to $24$ lakhs, $39$% for remaining.
 
 
 ***Solution***:
