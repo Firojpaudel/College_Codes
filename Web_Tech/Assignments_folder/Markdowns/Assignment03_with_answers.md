@@ -47,12 +47,21 @@ $$8, 9, 64, 25 ... 10^\text{th} \text{terms}$$
 ***Solution***:
 > [Click Here](../HTML/assignment_03_qn9.html) to redirect to the answer!
 
-#### Qn 10. Here is the income tax rates of Internal Revenue Department if Nepal.
-- less than $5,00,000 \longrightarrow 1\% \space \text{tax} \space (< 6,00,000 \space \text{for female and married individuals})$
-- $5,00,000 \space \text{to} \space 8,00,000 \longrightarrow 1\% \space \text{on upto} \space 5,00,000 \space \text{and} \space 10\% \space \text{extra on remaining}\\ \space \text{(female and married conditions apply for 1,00,000 added on minimum taxable amount)}$
-- $8,00,000 \space \text{to} \space 15,00,000 \longrightarrow \text{upto} \space 5 \space \text{lakhs:} \space 1\%, \space 5 \space \text{to} \space 8 \space \text{lakhs:} \space 10\%, \space 8-15 \space \text{lakh:} \space 20\%\\\space \text{(female and married conditions apply as above)}$
-- $15,00,000 \space \text{to} \space 24,00,000 \longrightarrow \text{as per above for upto} \space 15 \space \text{lakh,} \space 30\% \space \text{for} \space 15 \space \text{to} \space 24 \space \text{lakhs.}$
-- $24,00,000 \space \text{and above} \longrightarrow \text{as per above upto} \space 24 \space \text{lakhs,} \space 39\% \space \text{for remaining.}$
+#### Qn 10. Here is the income tax rates of Internal Revenue Department of Nepal.
+
+- less than $5,00,000 \longrightarrow 1\%$ tax $ (< 6,00,000$ for female and married individuals$)$
+- $5,00,000$ to $8,00,000 \longrightarrow 1\%$ on up to $5,00,000$ and $10\%$ extra on remaining  
+  (female and married conditions apply for $1,00,000$ added on minimum taxable amount)
+- $8,00,000$ to $15,00,000 \longrightarrow$  
+  up to $5$ lakhs: $1\%$,  
+  $5$ to $8$ lakhs: $10\%$,  
+  $8$ to $15$ lakh: $20\%$  
+  (female and married conditions apply as above)
+- $15,00,000$ to $24,00,000 \longrightarrow$  
+  as per above for up to $15$ lakh, $30\%$ for $15$ to $24$ lakhs.
+- $24,00,000$ and above $\longrightarrow$  
+  as per above up to $24$ lakhs, $39\%$ for remaining.
+
 
 ***Solution***:
 > [Click Here](../HTML/assignment_03_qn10.html) to redirect to the answer!
