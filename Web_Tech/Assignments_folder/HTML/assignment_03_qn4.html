@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 03: Qn 4</title>
+</head>
+<body>
+    <h4>Sum of Digits in Array</h4>
+    <div id="input"></div>
+    <div id="result"></div>
+    <script>
+        // Function to perform sum of digits in array
+        function sumOfDigits(array){
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                let index = array[i];
+                while (index > 0) {
+                    sum += index % 10;
+                    index = Math.floor(index / 10);
+                }
+            }
+            return sum;
+        }
+
+        // Array to store the numbers
+        const numbers = [];
+
+        // Loop to ask for 10 numbers
+        for (let i = 0; i < 10; i++) {
+            const num = parseInt(prompt(`Enter number ${i + 1}:`));
+            numbers.push(num);
+        }
+
+        // Function call
+        const sum = sumOfDigits(numbers);
+
+        // Printing in console
+        console.log("Array: " + numbers +"\n");
+        console.log("Sum of digits in the array: " + sum);
+        alert("Array: " + numbers + "\nSum of digits in the array: " + sum);
+
+        // Get a reference to the input div
+        const resultDiv1 = document.getElementById("input");
+        resultDiv1.textContent = "Array: " + numbers;
+
+        // Get a reference to the result div
+        const resultDiv2 = document.getElementById("result");
+        resultDiv2.textContent = "\n" +"Sum of digits in the array: " + sum;
+    </script>
+</body>
+</html>
