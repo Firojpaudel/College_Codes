@@ -47,13 +47,13 @@
         const average1 = document.getElementById("average1");
         average1.textContent = "Output of avg1 function for numbers:" + number4 + ", " + number5 + ", " + number6 + " and " + number7 + " is: " + avg1(number4, number5, number6, number7);
 
-        //Calling the agg function
+        //agg function takes outputs from avg and avg1 functions
         alert("Executing the agg function:")
-        let number8= parseFloat(prompt("Enter your first number"));
-        let number9= parseFloat(prompt("Enter your second number"));
+        let number8= average;
+        let number9= average1;
 
         const product = document.getElementById("product");
-        product.textContent = "Output of agg function for numbers:" + number8 + " and " + number9 + " is: " + agg(number8, number9);
+        product.textContent = "Output of agg values for functions output is "+ agg(avg1(number4, number5, number6, number7), avg(number1, number2, number3));
     </script>
 </body>
 </html>
