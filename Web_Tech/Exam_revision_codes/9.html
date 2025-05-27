@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQUERY- animate</title>
+</head>
+<body>
+    <!-- Basic Syntax: `$(selector).action()` -->
+    <button onclick="moveBoxdown()">Move Down</button>
+    <button onclick="moveBoxleft()">Move Left</button>
+    <div id="box" class= "box" style="width: 100px; height: 100px; background-color:aqua; position:absolute;"></div>
+
+    <script>
+        function moveBoxdown(){
+            $("#box").animate({top: "200px"}, 1000);
+        }
+
+        function moveBoxleft(){
+            $(".box").animate({left: "300px"}, 1000)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation: Past Question</title>
+</head>
+<body>
+    <form action="" name="form" id="form">
+        Name: <input type="text" name="username" id="username"><br><br>
+        Password: <input type="password" name="pass" id="pass"><br><br>
+        Country: 
+            <select name="country" id="country">
+            <option value="">--Select Country--</option>
+            <option value="nigeria">Nigeria</option>
+            <option value="ghana">Ghana</option>
+            <option value="kenya">Kenya</option>
+            <option value="south_africa">South Africa</option></select><br><br>
+        Gender:
+            <input type="radio" name="gender" id="gender">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="gender">
+            <label for="female">Female</label><br><br>
+        <input type="submit" id="submit" name="submit" onclick="validate()">
+    </form>
+
+
+    <script>
+        function validate(){
+            var username = document.getElementById("username").value;
+            if (username.length < 4){
+                alert("Username must be more tha 4 characters");
+                return false;
+            }
+
+            var pass = document.getElementById("pass").value;
+            if (!pass.match(/^[A-Za-z]*#$/)){
+                alert("Password must end with #");
+                return false;
+            }
+
+            var country = document.getElementById("country").value;
+            if (country === ""){
+                alert("Country must be selected");
+                return false;
+            }
+
+            var gender =  document.querySelector('input[name="gender"]:checked');
+            if (!gender){
+                alert("Please select your gender");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

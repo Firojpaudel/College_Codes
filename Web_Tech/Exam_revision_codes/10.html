@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="par">This is paragraph</p>
+    <button id="button" onclick="magic()">Click Here to see the magic 🪄!</button>
+    <script>
+        function magic(){
+            $("#par").slideUp(1000).slideDown(1000);
+        }
+    </script>
+</body>
+</html>
