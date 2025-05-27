@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past qn 2076</title>
+</head>
+<body>
+    <div class="image" id="image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ718nztPNJfCbDJjZG8fOkejBnBAeQw5eAUA&s" alt="">
+        <p id="desc" onmouseover="changedesc()" onmouseout="ogtext()">This is a description</p>
+    </div>
+
+    <script>
+        var imageinfo = { old: "This is a description",
+            changed: "Messgage changed"};
+
+        function changedesc(){
+            document.getElementById('desc').innerHTML = imageinfo.changed;
+        }
+
+        function ogtext(){
+            document.getElementById("desc").innerHTML = imageinfo.old;
+        }
+    </script>
+</body>
+</html>
