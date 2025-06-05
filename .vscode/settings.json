@@ -5,7 +5,9 @@
     "iostream": "cpp",
     "math.h": "c",
     "stdio.h": "c",
-    "ctime": "cpp"
+    "ctime": "cpp",
+    "ostream": "cpp",
+    "iomanip": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",

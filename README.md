@@ -248,6 +248,8 @@ $ git clone https://github.com/Firojpaudel/College_Codes.git
 - [Project Proposal](./SAD/Final%20Project%20Reports/SAD_Project_Proposal.pdf)
 - [Finalized Project](./SAD/Final%20Project%20Reports/SAD_Project__Finalized.pdf)
 - [Class Task: Pomodoro](./SAD/Class%20Task/)
+- [Final Submission Report](./SAD/Final%20Project%20Reports/SAD_submission.pdf)
+- [Class Task: Pomodoro](./SAD/Class%20Task/)
 </details>
 
 <details>
