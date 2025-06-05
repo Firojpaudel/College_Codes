@@ -87,3 +87,11 @@ console.log("========= RegEx =========\n");
 let text = "Hello World!";
 let pattern = /world/i;
 console.log(pattern.test(text));
+
+
+let x = {
+    'name': "john",
+    'age': 69
+};
+
+console.log(x['name']);

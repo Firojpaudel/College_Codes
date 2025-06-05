@@ -57,7 +57,7 @@ int main() {
     int gcd = extended_euclidean(num1, num2, x, y);
     
     cout << "\nGCD of " << num1 << " and " << num2 << " is: " << gcd << endl;
-    cout << "Coefficients (x, y) for Bézout's identity (" << num1 << "x + " << num2 << "y = gcd):" << endl;
+    cout << "Coefficients (x, y) for Bezout's identity (" << num1 << "x + " << num2 << "y = gcd):" << endl;
     cout << "x = " << x << ", y = " << y << endl;
     cout << "Verification: " << num1 << " * " << x << " + " << num2 << " * " << y << " = " << (num1 * x + num2 * y) << endl;
 
