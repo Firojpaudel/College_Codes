@@ -247,10 +247,7 @@ $ git clone https://github.com/Firojpaudel/College_Codes.git
 
 - [Project Proposal](./SAD/Final%20Project%20Reports/SAD_Project_Proposal.pdf)
 - [Finalized Project](./SAD/Final%20Project%20Reports/SAD_Project__Finalized.pdf)
-- [Class Task: Pomodoro](./SAD/Class%20Task/pomodoro.py)
-- [Class Task: Trial HTML](./SAD/Class%20Task/trial.html)
-- [Class Task: requirements.txt](./SAD/Class%20Task/requirements.txt)
-- [Class Task: Database Create](./SAD/Class%20Task/Db_codes/database_create.py)
+- [Class Task: Pomodoro](./SAD/Class%20Task/)
 </details>
 
 <details>
