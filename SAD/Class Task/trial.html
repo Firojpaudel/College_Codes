@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>trial.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+body {
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding: 0 26px;
+	line-height: 22px;
+	word-wrap: break-word;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: black;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+	background-color: #cccccc;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color: #007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before,
+.vscode-dark.showEditorSelection .code-active-line:before,
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.4);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before,
+.vscode-dark.showEditorSelection .code-line:hover:before,
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.6);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+	filter: grayscale(100%);
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid #000000;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-color: #000000;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	color: #000000;
+}
+
+table {
+	border-collapse: collapse;
+	color: #000000;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid #000000;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid #000000;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-left-color: #000000;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+code {
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.357em;
+	color: #000000;
+	background-color: #f0f0f0;
+	padding: 2px 4px;
+	border-radius: 3px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+	background-color: #f0f0f0;
+	color: #000000;
+}
+
+pre code {
+	color: #000000;
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre,
+.vscode-dark pre,
+.vscode-high-contrast pre {
+	background-color: #f0f0f0;
+}
+
+.vscode-high-contrast h1 {
+	border-color: #000000;
+}
+
+.vscode-light table > thead > tr > th,
+.vscode-dark table > thead > tr > th,
+.vscode-high-contrast table > thead > tr > th {
+	border-color: #000000;
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td,
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td,
+.vscode-high-contrast h1,
+.vscode-high-contrast hr,
+.vscode-high-contrast table > tbody > tr + tr > td {
+	border-color: #000000;
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #000000;
+	padding: 0.5em;
+	background-color: #f0f0f0;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: Arial, sans-serif;
+	padding: 0 12px;
+	background-color: #ffffff;
+	color: #000000;
+}
+
+pre {
+	background-color: #f0f0f0;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+	color: #000000;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(0, 0, 0, 0.1);
+	border-color: rgba(0, 0, 0, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+	filter: grayscale(100%);
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+	color: #000000;
+	background-color: #f0f0f0;
+	padding: 2px 4px;
+	border-radius: 3px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+	mermaid.initialize({
+	  startOnLoad: true,
+	  theme: 'neutral'
+	});
+  </script>
+<center>
+<h1>Hospital Management System</h1>
+</center>
+<h3>Context Diagram:</h3>
+<div align="center"></div>
+<center>
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+graph TD;
+	A[Patient] -->|Registers, Appointments| B(Hospital Management System)
+	B -->|Confirms Appointments| A;
+	C[Doctor] -->|Access Patient Records, Update Diagnosis| B;
+	B -->|Provides Patient History| C;
+	D[Admin Staff] -->|Manages Appointments, Billing| B;
+	B -->|Generates Reports, Bills| D;
+	E[Pharmacy] -->|Receives Prescriptions| B;
+	B -->|Sends Medicine Requests| E;
+</div></code></pre>
+</center>
+</div>
+<hr>
+<h3>DFD: LEVEL 0</h3>
+<div align="center">
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+graph TD;
+	A[Patient] -->|Registers, Book Appointment| B[1.0 Patient Management]
+	B -->|Stores Patient Details| C[Database]
+	C -->|Retrieves Patient Details| B
+	D[Doctor] -->|Checks Records, Updates Diagnosis| E[2.0 Doctor Consultation]
+	E -->|Fetches & Updates Records| C
+	B -->|Generates Bill| F[3.0 Billing System]
+	F -->|Issues Bill| A
+	G[Pharmacy] -->|Receives Prescription| H[4.0 Pharmacy Management]
+	H -->|Updates Stock| C
+</div></code></pre>
+</div>
+<hr>
+<h3>DFD: LEVEL 1</h3>
+<div align="center">
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+graph TD;
+	A[Patient] -->|Provides Details| B[1.1 Registration]
+	B -->|Stores in DB| C[Database]
+	D[1.2 Appointment System] -->|Fetches Patient Info| C
+	A -->|Requests Appointment| D
+	D -->|Schedules Appointment| E[Doctor]
+	E -->|Confirms Appointment| A
+</div></code></pre>
+</div>
+<hr>
+<h3>DFD: LEVEL 2</h3>
+<div align="center">
+<pre><code class="language-mermaid"><div class="mermaid">%%{init: {"themeVariables": {"fontSize": "10px"}}}%%
+graph TD;
+	A[Patient] -->|Selects Date & Doctor| B[1.2.1 Appointment Request]
+	B -->|Checks Availability| C[1.2.2 Schedule Management]
+	C -->|Confirms Slot| B
+	B -->|Updates Appointment List| D[Database]
+	D -->|Notifies Patient & Doctor| E[1.2.3 Notification System]
+</div></code></pre>
+</div>
+<hr>
+</body>
+</html>
