@@ -156,8 +156,8 @@
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
-   cd web-technology-lab
+   git clone https://github.com/Firojpaudel/College_Codes.git
+   cd college_codes/Web_Tech/Lab_Works
    ```
 
 2. For PHP files:
