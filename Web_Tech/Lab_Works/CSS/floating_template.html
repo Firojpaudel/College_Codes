@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Floating Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            float: left;
+            text-align: center;
+            line-height: 200px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .box1 { background-color: #ff4444; }
+        .box2 { background-color: #4444ff; }
+        .box3 { background-color: #44ff44; }
+        .box4 { background-color: #ff44ff; }
+        .box5 { background-color: #44ffff; }
+        .box6 { background-color: #ffff44; }
+
+        /* Clear float after every third box */
+        .box:nth-child(3n+1) {
+            clear: left;
+        }
+
+        /* Alternative layout using CSS Grid */
+        .grid-container {
+            width: 800px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .grid-box {
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin: 20px;">Float Layout</h1>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+    </div>
+
+    <h1 style="text-align: center; margin: 20px;">Grid Layout (Modern Alternative)</h1>
+    <div class="grid-container">
+        <div class="grid-box box1">1</div>
+        <div class="grid-box box2">2</div>
+        <div class="grid-box box3">3</div>
+        <div class="grid-box box4">4</div>
+        <div class="grid-box box5">5</div>
+        <div class="grid-box box6">6</div>
+    </div>
+</body>
+</html> 

@@ -293,6 +293,7 @@ $ git clone https://github.com/Firojpaudel/College_Codes.git
 - [Assignments (HTML, CSS, Markdown, Images)](./Web_Tech/Assignments_folder/)
 - [Classworks (HTML, CSS, JS, images)](./Web_Tech/Classworks_folder/)
 - [Exam Revision Codes](./Web_Tech/Exam_revision_codes/)
+- [Lab Report Codes](./Web_Tech/Lab_Works/)
 </details>
 
 ---

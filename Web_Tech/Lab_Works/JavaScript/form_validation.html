@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation with RegEx</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .error {
+            color: #dc3545;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: none;
+        }
+
+        input.invalid {
+            border-color: #dc3545;
+        }
+
+        input.valid {
+            border-color: #28a745;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .validation-rules {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+        }
+
+        .validation-rules h3 {
+            margin-top: 0;
+        }
+
+        .validation-rules ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm(event)">
+            <!-- Username Field -->
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" onkeyup="validateUsername(this)">
+                <div class="error" id="username-error">
+                    Username must be 4-20 characters and contain only letters, numbers, and underscores
+                </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" onkeyup="validateEmail(this)">
+                <div class="error" id="email-error">
+                    Please enter a valid email address
+                </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" onkeyup="validatePassword(this)">
+                <div class="error" id="password-error">
+                    Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character
+                </div>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" onkeyup="validatePhone(this)">
+                <div class="error" id="phone-error">
+                    Please enter a valid phone number (e.g., 123-456-7890)
+                </div>
+            </div>
+
+            <!-- URL Field -->
+            <div class="form-group">
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website" onkeyup="validateWebsite(this)">
+                <div class="error" id="website-error">
+                    Please enter a valid URL (e.g., https://www.example.com)
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="success-message" class="success-message">
+            Form submitted successfully!
+        </div>
+    </div>
+
+    <div class="validation-rules">
+        <h3>Validation Rules:</h3>
+        <ul>
+            <li>Username: 4-20 characters, letters, numbers, and underscores only</li>
+            <li>Email: Must be a valid email format</li>
+            <li>Password: Minimum 8 characters, must include uppercase, lowercase, number, and special character</li>
+            <li>Phone: Format XXX-XXX-XXXX</li>
+            <li>Website: Must be a valid URL format</li>
+        </ul>
+    </div>
+
+    <script>
+        // Regular Expressions
+        const patterns = {
+            username: /^[a-zA-Z0-9_]{4,20}$/,
+            email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+            password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+            phone: /^\d{3}-\d{3}-\d{4}$/,
+            website: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)$/
+        };
+
+        // Validation Functions
+        function validateUsername(input) {
+            return validateField(input, 'username');
+        }
+
+        function validateEmail(input) {
+            return validateField(input, 'email');
+        }
+
+        function validatePassword(input) {
+            return validateField(input, 'password');
+        }
+
+        function validatePhone(input) {
+            return validateField(input, 'phone');
+        }
+
+        function validateWebsite(input) {
+            return validateField(input, 'website');
+        }
+
+        function validateField(input, fieldName) {
+            const isValid = patterns[fieldName].test(input.value);
+            const errorElement = document.getElementById(`${fieldName}-error`);
+            
+            if (isValid) {
+                input.classList.remove('invalid');
+                input.classList.add('valid');
+                errorElement.style.display = 'none';
+            } else {
+                input.classList.remove('valid');
+                input.classList.add('invalid');
+                errorElement.style.display = 'block';
+            }
+            
+            return isValid;
+        }
+
+        // Form Submission
+        function validateForm(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const phone = document.getElementById('phone');
+            const website = document.getElementById('website');
+
+            const isValid = validateUsername(username) &&
+                          validateEmail(email) &&
+                          validatePassword(password) &&
+                          validatePhone(phone) &&
+                          validateWebsite(website);
+
+            if (isValid) {
+                const successMessage = document.getElementById('success-message');
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                    event.target.reset();
+                    document.querySelectorAll('input').forEach(input => {
+                        input.classList.remove('valid');
+                    });
+                }, 3000);
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            height: 400px;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+        }
+
+        /* Static positioning (default) */
+        .static {
+            background-color: #e74c3c;
+        }
+
+        /* Relative positioning */
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #2ecc71;
+        }
+
+        /* Absolute positioning */
+        .absolute {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            background-color: #f1c40f;
+        }
+
+        /* Fixed positioning */
+        .fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #9b59b6;
+        }
+
+        /* Sticky positioning */
+        .sticky {
+            position: sticky;
+            top: 20px;
+            background-color: #e67e22;
+        }
+
+        /* Example container */
+        .example {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .description {
+            margin: 10px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Position Properties</h1>
+
+    <div class="example">
+        <h2>Static Position (Default)</h2>
+        <div class="description">Elements are positioned according to the normal flow of the document.</div>
+        <div class="box static">Static</div>
+    </div>
+
+    <div class="example">
+        <h2>Relative Position</h2>
+        <div class="description">Element is positioned relative to its normal position.</div>
+        <div class="box relative">Relative</div>
+    </div>
+
+    <div class="example">
+        <h2>Absolute Position</h2>
+        <div class="description">Element is positioned relative to its closest positioned ancestor.</div>
+        <div class="container">
+            <div class="box absolute">Absolute</div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h2>Fixed Position</h2>
+        <div class="description">Element is positioned relative to the browser window.</div>
+        <div class="box fixed">Fixed</div>
+    </div>
+
+    <div class="example">
+        <h2>Sticky Position</h2>
+        <div class="description">Element is positioned based on the user's scroll position.</div>
+        <div class="box sticky">Sticky</div>
+    </div>
+
+    <!-- Add extra content to demonstrate sticky and fixed positioning -->
+    <div style="height: 1000px;"></div>
+</body>
+</html> 

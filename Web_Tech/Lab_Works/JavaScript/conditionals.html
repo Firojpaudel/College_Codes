@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Conditional Statements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .example {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .output {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Conditional Statements</h1>
+
+    <!-- If Statement Example -->
+    <div class="example">
+        <h2>1. If Statement</h2>
+        <input type="number" id="ageInput" placeholder="Enter your age">
+        <button onclick="checkAge()">Check Age</button>
+        <div id="ageOutput" class="output"></div>
+    </div>
+
+    <!-- If...else Example -->
+    <div class="example">
+        <h2>2. If...else Statement</h2>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="checkEvenOdd()">Check Even/Odd</button>
+        <div id="evenOddOutput" class="output"></div>
+    </div>
+
+    <!-- If...else if...else Example -->
+    <div class="example">
+        <h2>3. If...else if...else Statement</h2>
+        <input type="number" id="scoreInput" placeholder="Enter score (0-100)">
+        <button onclick="calculateGrade()">Calculate Grade</button>
+        <div id="gradeOutput" class="output"></div>
+    </div>
+
+    <!-- Switch Statement Example -->
+    <div class="example">
+        <h2>4. Switch Statement</h2>
+        <select id="daySelect">
+            <option value="0">Sunday</option>
+            <option value="1">Monday</option>
+            <option value="2">Tuesday</option>
+            <option value="3">Wednesday</option>
+            <option value="4">Thursday</option>
+            <option value="5">Friday</option>
+            <option value="6">Saturday</option>
+        </select>
+        <button onclick="checkDay()">Check Day Type</button>
+        <div id="dayOutput" class="output"></div>
+    </div>
+
+    <!-- Ternary Operator Example -->
+    <div class="example">
+        <h2>5. Ternary Operator</h2>
+        <input type="number" id="temperatureInput" placeholder="Enter temperature">
+        <button onclick="checkTemperature()">Check Temperature</button>
+        <div id="temperatureOutput" class="output"></div>
+    </div>
+
+    <script>
+        // If Statement
+        function checkAge() {
+            const age = parseInt(document.getElementById('ageInput').value);
+            const output = document.getElementById('ageOutput');
+
+            if (age >= 18) {
+                output.textContent = 'You are an adult!';
+            }
+            if (age < 18) {
+                output.textContent = 'You are a minor!';
+            }
+        }
+
+        // If...else Statement
+        function checkEvenOdd() {
+            const number = parseInt(document.getElementById('numberInput').value);
+            const output = document.getElementById('evenOddOutput');
+
+            if (number % 2 === 0) {
+                output.textContent = `${number} is even`;
+            } else {
+                output.textContent = `${number} is odd`;
+            }
+        }
+
+        // If...else if...else Statement
+        function calculateGrade() {
+            const score = parseInt(document.getElementById('scoreInput').value);
+            const output = document.getElementById('gradeOutput');
+            let grade;
+
+            if (score >= 90) {
+                grade = 'A';
+            } else if (score >= 80) {
+                grade = 'B';
+            } else if (score >= 70) {
+                grade = 'C';
+            } else if (score >= 60) {
+                grade = 'D';
+            } else {
+                grade = 'F';
+            }
+
+            output.textContent = `Your grade is: ${grade}`;
+        }
+
+        // Switch Statement
+        function checkDay() {
+            const day = parseInt(document.getElementById('daySelect').value);
+            const output = document.getElementById('dayOutput');
+            let type;
+
+            switch (day) {
+                case 0:
+                case 6:
+                    type = 'Weekend';
+                    break;
+                default:
+                    type = 'Weekday';
+            }
+
+            output.textContent = `This is a ${type}`;
+        }
+
+        // Ternary Operator
+        function checkTemperature() {
+            const temp = parseInt(document.getElementById('temperatureInput').value);
+            const output = document.getElementById('temperatureOutput');
+
+            const message = temp >= 25 
+                ? "It's a hot day!" 
+                : temp >= 15 
+                    ? "It's a pleasant day!" 
+                    : "It's a cold day!";
+
+            output.textContent = message;
+        }
+    </script>
+</body>
+</html> 

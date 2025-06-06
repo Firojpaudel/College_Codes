@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output Methods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .output-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #output-div {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Output Methods</h1>
+
+    <div class="output-section">
+        <h2>1. console.log()</h2>
+        <button onclick="demonstrateConsoleLog()">Show Console Log</button>
+        <p>Open the browser console (F12) to see the output</p>
+    </div>
+
+    <div class="output-section">
+        <h2>2. document.write()</h2>
+        <button onclick="demonstrateDocumentWrite()">Show document.write()</button>
+        <button onclick="reloadPage()">Reload Page</button>
+    </div>
+
+    <div class="output-section">
+        <h2>3. innerHTML</h2>
+        <button onclick="demonstrateInnerHTML()">Show innerHTML</button>
+        <div id="output-div"></div>
+    </div>
+
+    <div class="output-section">
+        <h2>4. alert()</h2>
+        <button onclick="demonstrateAlert()">Show Alert</button>
+    </div>
+
+    <div class="output-section">
+        <h2>5. prompt()</h2>
+        <button onclick="demonstratePrompt()">Show Prompt</button>
+        <div id="prompt-result"></div>
+    </div>
+
+    <script>
+        // Console.log demonstration
+        function demonstrateConsoleLog() {
+            console.log('Simple message');
+            console.info('Info message');
+            console.warn('Warning message');
+            console.error('Error message');
+            console.log('Object example:', { name: 'John', age: 30 });
+            console.table(['Apple', 'Banana', 'Orange']);
+        }
+
+        // document.write demonstration
+        function demonstrateDocumentWrite() {
+            document.write('<h3>This is written using document.write()</h3>');
+            document.write('<p>Note: This replaces all existing content!</p>');
+            document.write('<p>Click "Reload Page" to restore the original content.</p>');
+        }
+
+        // Reload page function
+        function reloadPage() {
+            location.reload();
+        }
+
+        // innerHTML demonstration
+        function demonstrateInnerHTML() {
+            const outputDiv = document.getElementById('output-div');
+            outputDiv.innerHTML = `
+                <h3>This is written using innerHTML</h3>
+                <p>We can include <strong>HTML tags</strong> and they will be rendered properly.</p>
+                <ul>
+                    <li>List item 1</li>
+                    <li>List item 2</li>
+                </ul>
+            `;
+        }
+
+        // Alert demonstration
+        function demonstrateAlert() {
+            alert('This is an alert message!\nIt can have multiple lines.');
+        }
+
+        // Prompt demonstration
+        function demonstratePrompt() {
+            const name = prompt('Please enter your name:', 'Guest');
+            const resultDiv = document.getElementById('prompt-result');
+            if (name) {
+                resultDiv.innerHTML = `Hello, ${name}! Nice to meet you.`;
+            } else {
+                resultDiv.innerHTML = 'You cancelled the prompt.';
+            }
+        }
+    </script>
+</body>
+</html> 

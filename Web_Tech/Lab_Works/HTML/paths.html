@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path References Example</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+        .example {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Path References in HTML</h2>
+
+        <div class="example">
+            <h3>Absolute Paths</h3>
+            <p>Absolute paths start from the root and include the full URL:</p>
+            <ul>
+                <li>Link to Google: <a href="https://www.google.com">Google</a></li>
+                <li>Image from external source: <br>
+                    <img src="https://via.placeholder.com/150" alt="Placeholder image">
+                </li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h3>Relative Paths</h3>
+            <p>Relative paths are relative to the current document:</p>
+            <ul>
+                <li>Link to table example: <a href="./table.html">Table Example</a></li>
+                <li>Link to form example: <a href="form.html">Form Example</a></li>
+                <li>Link to parent directory: <a href="../">Parent Directory</a></li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h3>File Structure Example</h3>
+            <pre>
+Web_Tech/
+├── Lab_Works/
+│   ├── HTML/
+│   │   ├── paths.html (current file)
+│   │   ├── table.html
+│   │   ├── form.html
+│   │   └── images/
+│   │       └── sample.jpg
+│   ├── CSS/
+│   └── JavaScript/
+            </pre>
+        </div>
+
+        <div class="example">
+            <h3>Path Types Explained</h3>
+            <ul>
+                <li><strong>Absolute Path:</strong> https://www.example.com/images/photo.jpg</li>
+                <li><strong>Relative Path (same directory):</strong> image.jpg</li>
+                <li><strong>Relative Path (subdirectory):</strong> images/photo.jpg</li>
+                <li><strong>Relative Path (parent directory):</strong> ../images/photo.jpg</li>
+                <li><strong>Root Relative Path:</strong> /images/photo.jpg</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> 
