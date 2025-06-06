@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists Example</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Types of Lists in HTML</h2>
+
+        <h3>Ordered List (ol)</h3>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item
+                <ol type="a">
+                    <li>Sub-item 1</li>
+                    <li>Sub-item 2</li>
+                </ol>
+            </li>
+        </ol>
+
+        <h3>Unordered List (ul)</h3>
+        <ul>
+            <li>Red</li>
+            <li>Green</li>
+            <li>Blue
+                <ul style="list-style-type: circle;">
+                    <li>Light Blue</li>
+                    <li>Dark Blue</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Description List (dl)</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language</dd>
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets</dd>
+        </dl>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Stylesheet Types</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Internal CSS -->
+    <style>
+        /* Internal stylesheet */
+        .internal-example {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid #666;
+        }
+        
+        .internal-text {
+            color: #0066cc;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Types of CSS Stylesheets</h1>
+
+    <!-- Inline CSS -->
+    <div style="background-color: #ffebee; padding: 15px; margin: 20px; border: 2px dashed #ff4444;">
+        <h2 style="color: #cc0000;">Inline CSS Example</h2>
+        <p style="font-style: italic;">This text is styled using inline CSS (style attribute)</p>
+    </div>
+
+    <!-- Internal CSS -->
+    <div class="internal-example">
+        <h2>Internal CSS Example</h2>
+        <p class="internal-text">This text is styled using internal CSS (style tag)</p>
+    </div>
+
+    <!-- External CSS -->
+    <div class="external-example">
+        <h2>External CSS Example</h2>
+        <p class="external-text">This text is styled using external CSS (separate file)</p>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,31 @@
+/* External stylesheet */
+.external-example {
+    background-color: #e8f5e9;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #4caf50;
+}
+
+.external-text {
+    color: #2e7d32;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-top: 0;
+} 

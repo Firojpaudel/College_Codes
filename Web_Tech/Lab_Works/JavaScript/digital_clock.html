@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #1a1a1a;
+        }
+
+        .clock-container {
+            text-align: center;
+        }
+
+        .clock {
+            background-color: #000;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            color: #00ff00;
+            font-family: 'Digital', monospace;
+            margin-bottom: 20px;
+        }
+
+        .time {
+            font-size: 5em;
+            margin-bottom: 10px;
+        }
+
+        .date {
+            font-size: 1.5em;
+            color: #666;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        .format-12h {
+            color: #00ff00;
+        }
+
+        /* Options panel */
+        .options {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .option-group {
+            margin: 10px 0;
+            color: white;
+        }
+
+        select {
+            padding: 5px;
+            margin-left: 10px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-container">
+        <div class="clock">
+            <div id="time" class="time">00:00:00</div>
+            <div id="date" class="date">Monday, January 1, 2024</div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="toggleFormat()">12/24 Hour</button>
+            <button onclick="toggleSeconds()">Show/Hide Seconds</button>
+        </div>
+
+        <div class="options">
+            <div class="option-group">
+                <label for="dateFormat">Date Format:</label>
+                <select id="dateFormat" onchange="updateClock()">
+                    <option value="full">Full (Monday, January 1, 2024)</option>
+                    <option value="short">Short (Jan 1, 2024)</option>
+                    <option value="numeric">Numeric (01/01/2024)</option>
+                </select>
+            </div>
+            <div class="option-group">
+                <label for="clockColor">Clock Color:</label>
+                <select id="clockColor" onchange="updateClockColor()">
+                    <option value="#00ff00">Green</option>
+                    <option value="#ff0000">Red</option>
+                    <option value="#00ffff">Cyan</option>
+                    <option value="#ff00ff">Magenta</option>
+                    <option value="#ffffff">White</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let is24Hour = true;
+        let showSeconds = true;
+
+        function updateClock() {
+            const now = new Date();
+            const timeElement = document.getElementById('time');
+            const dateElement = document.getElementById('date');
+            
+            // Time formatting
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            let timeString = '';
+            
+            if (!is24Hour) {
+                const period = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12 || 12;
+                timeString = `${hours}:${minutes}${showSeconds ? ':' + seconds : ''} ${period}`;
+            } else {
+                hours = hours.toString().padStart(2, '0');
+                timeString = `${hours}:${minutes}${showSeconds ? ':' + seconds : ''}`;
+            }
+            
+            timeElement.textContent = timeString;
+
+            // Date formatting
+            const dateFormat = document.getElementById('dateFormat').value;
+            let dateString = '';
+
+            switch(dateFormat) {
+                case 'full':
+                    dateString = now.toLocaleDateString('en-US', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                    break;
+                case 'short':
+                    dateString = now.toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric'
+                    });
+                    break;
+                case 'numeric':
+                    dateString = now.toLocaleDateString('en-US', {
+                        month: '2-digit',
+                        day: '2-digit',
+                        year: 'numeric'
+                    });
+                    break;
+            }
+
+            dateElement.textContent = dateString;
+        }
+
+        function toggleFormat() {
+            is24Hour = !is24Hour;
+            updateClock();
+        }
+
+        function toggleSeconds() {
+            showSeconds = !showSeconds;
+            updateClock();
+        }
+
+        function updateClockColor() {
+            const color = document.getElementById('clockColor').value;
+            document.getElementById('time').style.color = color;
+        }
+
+        // Update clock every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html> 
