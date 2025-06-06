@@ -173,7 +173,7 @@
 ## 🛠️ Technologies Used
 <div align="center">
 
-[![Tech Stack](https://skillicons.dev/icons?i=html,css,js,jquery,php,mysql)](https://skillicons.dev)
+[![Tech Stack](https://skillicons.dev/icons?i=html,css,js,jquery,php,mysql)]()
 
 </div>
 
