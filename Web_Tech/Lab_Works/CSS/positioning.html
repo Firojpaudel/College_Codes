@@ -3,128 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Positioning</title>
+    <title>Space Positioning</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
+            background: #0a0a2a;
+            color: white;
             font-family: Arial, sans-serif;
+            min-height: 150vh;
             padding: 20px;
         }
-
-        .container {
-            margin: 20px;
-            padding: 20px;
-            border: 2px solid #ccc;
-            height: 400px;
-            position: relative;
+        .object {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
         }
-
-        .box {
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sun {
             width: 100px;
             height: 100px;
-            background-color: #3498db;
-            color: white;
-            text-align: center;
-            line-height: 100px;
-            margin: 10px;
+            background: radial-gradient(#ffd700, #ff8c00);
+            margin: 20px auto;
         }
-
-        /* Static positioning (default) */
-        .static {
-            background-color: #e74c3c;
-        }
-
-        /* Relative positioning */
-        .relative {
+        .earth {
             position: relative;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(#4B9CD3, #13294B);
+            left: 50px;
             top: 20px;
-            left: 20px;
-            background-color: #2ecc71;
         }
-
-        /* Absolute positioning */
-        .absolute {
+        .space-box {
+            position: relative;
+            background: rgba(255,255,255,0.05);
+            height: 150px;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .moon {
             position: absolute;
-            top: 50px;
-            right: 50px;
-            background-color: #f1c40f;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(#D3D3D3, #808080);
+            top: 20px;
+            right: 40px;
         }
-
-        /* Fixed positioning */
-        .fixed {
+        .star {
             position: fixed;
+            width: 40px;
+            height: 40px;
+            background: #FFD700;
             bottom: 20px;
             right: 20px;
-            background-color: #9b59b6;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
         }
-
-        /* Sticky positioning */
-        .sticky {
-            position: sticky;
-            top: 20px;
-            background-color: #e67e22;
-        }
-
-        /* Example container */
-        .example {
-            margin-bottom: 40px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .description {
-            margin: 10px 0;
-            color: #666;
-        }
+        section { margin: 30px 0; }
+        h2 { color: #FFD700; margin-bottom: 10px; }
+        p { background: rgba(255,255,255,0.1); padding: 10px; border-radius: 4px; margin: 5px 0; }
     </style>
 </head>
 <body>
-    <h1>CSS Position Properties</h1>
-
-    <div class="example">
-        <h2>Static Position (Default)</h2>
-        <div class="description">Elements are positioned according to the normal flow of the document.</div>
-        <div class="box static">Static</div>
-    </div>
-
-    <div class="example">
-        <h2>Relative Position</h2>
-        <div class="description">Element is positioned relative to its normal position.</div>
-        <div class="box relative">Relative</div>
-    </div>
-
-    <div class="example">
-        <h2>Absolute Position</h2>
-        <div class="description">Element is positioned relative to its closest positioned ancestor.</div>
-        <div class="container">
-            <div class="box absolute">Absolute</div>
+    <nav>📒 Sticky Navbar </nav>
+    <section>
+        <h2>Static Sun</h2>
+        <p>Normal document flow</p>
+        <div class="object sun">Sun</div>
+    </section>
+    <section>
+        <h2>Relative Earth</h2>
+        <p>Shifted 50px right, 20px down</p>
+        <div class="space-box">
+            <div class="object earth">Earth</div>
         </div>
-    </div>
-
-    <div class="example">
-        <h2>Fixed Position</h2>
-        <div class="description">Element is positioned relative to the browser window.</div>
-        <div class="box fixed">Fixed</div>
-    </div>
-
-    <div class="example">
-        <h2>Sticky Position</h2>
-        <div class="description">Element is positioned based on the user's scroll position.</div>
-        <div class="box sticky">Sticky</div>
-    </div>
-
-    <!-- Add extra content to demonstrate sticky and fixed positioning -->
-    <div style="height: 1000px;"></div>
+    </section>
+    <section>
+        <h2>Absolute Moon</h2>
+        <p>Positioned relative to space-box</p>
+        <div class="space-box">
+            <div class="object moon">Moon</div>
+        </div>
+    </section>
+    <div class="object star"></div>
 </body>
 </html> 
