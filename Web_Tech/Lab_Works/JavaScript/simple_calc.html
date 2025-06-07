@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <div id="result">Result will appear here</div>
+    <script>
+        function calculate() {
+            let num1 = parseFloat(prompt("Enter first number:"));
+            let op = prompt("Enter operator (+, -, *, /):");
+            let num2 = parseFloat(prompt("Enter second number:"));
+            let result;
+
+            switch(op) {
+                case '+': result = num1 + num2; break;
+                case '-': result = num1 - num2; break;
+                case '*': result = num1 * num2; break;
+                case '/': result = num2 !== 0 ? num1 / num2 : "Cannot divide by zero!"; break;
+                default: result = "Invalid operator!";
+            }
+
+            document.getElementById("result").innerHTML = `${num1} ${op} ${num2} = ${result}`;
+            alert(`Result: ${result}`);
+        }
+
+        // Auto-start calculator
+        calculate();
+
+        // Add button to calculate again
+        document.body.innerHTML += '<br><button onclick="calculate()">Calculate Again</button>';
+    </script>
+</body>
+</html>

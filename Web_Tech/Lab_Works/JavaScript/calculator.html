@@ -31,6 +31,21 @@
             border-radius: 5px;
             text-align: right;
             font-size: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 80px;
+        }
+
+        .expression {
+            font-size: 16px;
+            color: #6c757d;
+            min-height: 24px;
+            margin-bottom: 5px;
+        }
+
+        .result {
+            font-size: 28px;
+            color: #212529;
         }
 
         .buttons {
@@ -65,7 +80,7 @@
         .equals {
             background-color: #007bff;
             color: white;
-            grid-column: span 2;
+            grid-column: span 4;
         }
 
         .equals:hover {
@@ -75,7 +90,7 @@
         .clear {
             background-color: #dc3545;
             color: white;
-            grid-column: span 2;
+            grid-column: span 3;
         }
 
         .clear:hover {
@@ -85,43 +100,58 @@
 </head>
 <body>
     <div class="calculator">
-        <div class="display" id="display">0</div>
+        <div class="display">
+            <div id="expression" class="expression">0</div>
+            <div id="result" class="result">0</div>
+        </div>
         <div class="buttons">
             <button class="clear" onclick="clearDisplay()">C</button>
             <button class="operator" onclick="appendOperator('/')">/</button>
+            
             <button onclick="appendNumber('7')">7</button>
             <button onclick="appendNumber('8')">8</button>
             <button onclick="appendNumber('9')">9</button>
             <button class="operator" onclick="appendOperator('*')">×</button>
+            
             <button onclick="appendNumber('4')">4</button>
             <button onclick="appendNumber('5')">5</button>
             <button onclick="appendNumber('6')">6</button>
             <button class="operator" onclick="appendOperator('-')">-</button>
+            
             <button onclick="appendNumber('1')">1</button>
             <button onclick="appendNumber('2')">2</button>
             <button onclick="appendNumber('3')">3</button>
             <button class="operator" onclick="appendOperator('+')">+</button>
-            <button onclick="appendNumber('0')">0</button>
+            
+            <button onclick="appendNumber('0')" style="grid-column: span 2">0</button>
             <button onclick="appendNumber('.')">.</button>
+            <button class="operator" onclick="appendOperator('%')">%</button>
+            
             <button class="equals" onclick="calculate()">=</button>
         </div>
     </div>
 
     <script>
         let currentDisplay = '0';
+        let expression = '0';
         let needsClear = false;
 
         function updateDisplay() {
-            document.getElementById('display').textContent = currentDisplay;
+            document.getElementById('expression').textContent = expression;
+            document.getElementById('result').textContent = currentDisplay;
         }
 
         function appendNumber(num) {
             if (currentDisplay === '0' || needsClear) {
                 currentDisplay = num;
+                if (needsClear) {
+                    expression = '0';
+                }
                 needsClear = false;
             } else {
                 currentDisplay += num;
             }
+            expression = currentDisplay;
             updateDisplay();
         }
 
@@ -131,25 +161,44 @@
                 !currentDisplay.endsWith('-') && 
                 !currentDisplay.endsWith('*') && 
                 !currentDisplay.endsWith('/')) {
-                currentDisplay += op;
-                updateDisplay();
+                if (op === '%') {
+                    try {
+                        expression = currentDisplay + ' % = ';
+                        const value = parseFloat(currentDisplay);
+                        currentDisplay = (value / 100).toString();
+                        updateDisplay();
+                        needsClear = true;
+                    } catch (error) {
+                        expression = 'Error';
+                        currentDisplay = 'Error';
+                        needsClear = true;
+                        updateDisplay();
+                    }
+                } else {
+                    currentDisplay += op;
+                    expression = currentDisplay;
+                    updateDisplay();
+                }
             }
         }
 
         function clearDisplay() {
             currentDisplay = '0';
+            expression = '';
             needsClear = false;
             updateDisplay();
         }
 
         function calculate() {
             try {
+                expression = currentDisplay + ' = ';
                 // Using Function instead of eval for better security
                 const result = new Function('return ' + currentDisplay)();
                 currentDisplay = Number.isInteger(result) ? result.toString() : result.toFixed(2);
                 needsClear = true;
                 updateDisplay();
             } catch (error) {
+                expression = 'Error';
                 currentDisplay = 'Error';
                 needsClear = true;
                 updateDisplay();
