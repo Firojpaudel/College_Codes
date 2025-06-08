@@ -126,10 +126,14 @@ $ git clone https://github.com/Firojpaudel/College_Codes.git
 <summary><b>6. DAA (Design and Analysis of Algorithms)</b></summary>
 
 - [Lab Report PDF](./DAA/Lab%20Report/DAA_labreport.pdf)
+- [0/1 Knapsack](./DAA/Codes/01_knapsack.cpp)
 - [Binary Search](./DAA/Codes/binary_search.cpp)
 - [Bubble Sort](./DAA/Codes/Bubble_sort.cpp)
+- [Chinese Remainder Theorem](./DAA/Codes/chinese_remainder_theorem.cpp)
+- [Dijkstra's Algorithm](./DAA/Codes/Djkstra.cpp)
 - [Factorial](./DAA/Codes/Factorial.cpp)
 - [Fibonacci](./DAA/Codes/fibonacci.cpp)
+- [Floyd Warshall](./DAA/Codes/Floyd_warshall.cpp)
 - [GCD](./DAA/Codes/GCD.cpp)
 - [Heap Sort](./DAA/Codes/heap_sort.cpp)
 - [Insertion Sort](./DAA/Codes/Insertion_sort.cpp)
@@ -137,11 +141,16 @@ $ git clone https://github.com/Firojpaudel/College_Codes.git
 - [Knapsack](./DAA/Codes/Knapsack.cpp)
 - [Kruskal's](./DAA/Codes/kruskals.cpp)
 - [Linear Search](./DAA/Codes/LinearSearch.cpp)
+- [Matrix Chain Multiplication](./DAA/Codes/Matrix_Chain_Multiplication.cpp)
 - [Merge Sort](./DAA/Codes/Merge_sort.cpp)
+- [Miller Rabin Primality](./DAA/Codes/miller_rabin_primality.cpp)
 - [Min Max Sort](./DAA/Codes/min_max_sort.cpp)
+- [N Queens](./DAA/Codes/n_queens.cpp)
 - [Prims](./DAA/Codes/prims.cpp)
 - [Quick Sort](./DAA/Codes/Quick_Sort.cpp)
 - [Selection Sort](./DAA/Codes/Selection_sort.cpp)
+- [Subset Sum](./DAA/Codes/SubsetSum.cpp)
+
 </details>
 
 <details>
