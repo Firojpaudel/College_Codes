@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Timers Example</title>
+    <title>Simple JavaScript Timers</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 600px;
+            margin: 20px auto;
             padding: 20px;
         }
 
         .example {
             margin: 20px 0;
-            padding: 20px;
+            padding: 15px;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
 
         .output {
-            background-color: #f8f9fa;
+            background-color: #f5f5f5;
             padding: 10px;
             margin-top: 10px;
-            border-radius: 5px;
-            min-height: 50px;
+            border-radius: 4px;
         }
 
         button {
@@ -33,193 +31,56 @@
             margin: 5px;
             cursor: pointer;
         }
-
-        .timer-display {
-            font-size: 2em;
-            font-weight: bold;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 20px;
-            background-color: #f0f0f0;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-
-        .progress {
-            width: 0%;
-            height: 100%;
-            background-color: #4CAF50;
-            transition: width 0.1s linear;
-        }
-
-        .color-box {
-            width: 100px;
-            height: 100px;
-            margin: 20px auto;
-            border-radius: 10px;
-            transition: background-color 0.5s ease;
-        }
     </style>
 </head>
 <body>
-    <h1>JavaScript Timers Example</h1>
+    <h1>Simple JavaScript Timers</h1>
 
     <!-- setTimeout Example -->
     <div class="example">
-        <h2>1. setTimeout Example</h2>
-        <p>Delayed Message:</p>
-        <button onclick="startDelayedMessage()">Show Message</button>
+        <h2>setTimeout Demo</h2>
+        <button onclick="showDelayedMessage()">Show Delayed Message</button>
         <div id="timeoutOutput" class="output"></div>
-    </div>
-
-    <!-- Multiple setTimeout Example -->
-    <div class="example">
-        <h2>2. Multiple setTimeout Example</h2>
-        <p>Countdown with setTimeout:</p>
-        <button onclick="startCountdown()">Start Countdown</button>
-        <div id="countdownDisplay" class="timer-display">3</div>
-        <div id="countdownOutput" class="output"></div>
     </div>
 
     <!-- setInterval Example -->
     <div class="example">
-        <h2>3. setInterval Example</h2>
-        <p>Digital Clock:</p>
-        <div id="clockDisplay" class="timer-display"></div>
-    </div>
-
-    <!-- Progress Bar Example -->
-    <div class="example">
-        <h2>4. Progress Bar with setInterval</h2>
-        <div class="progress-bar">
-            <div id="progress" class="progress"></div>
-        </div>
-        <button onclick="startProgress()">Start Progress</button>
-        <button onclick="stopProgress()">Stop Progress</button>
-        <div id="progressOutput" class="output"></div>
-    </div>
-
-    <!-- Color Change Example -->
-    <div class="example">
-        <h2>5. Color Change with setInterval</h2>
-        <div id="colorBox" class="color-box"></div>
-        <button onclick="startColorChange()">Start Color Change</button>
-        <button onclick="stopColorChange()">Stop Color Change</button>
+        <h2>setInterval Demo</h2>
+        <button onclick="startCounter()">Start Counter</button>
+        <button onclick="stopCounter()">Stop Counter</button>
+        <div id="counterOutput" class="output">0</div>
     </div>
 
     <script>
         // setTimeout Example
-        function startDelayedMessage() {
+        function showDelayedMessage() {
             const output = document.getElementById('timeoutOutput');
-            output.textContent = 'Waiting for 2 seconds...';
+            output.textContent = 'Waiting...';
             
             setTimeout(() => {
-                output.textContent = 'Message appeared after 2 seconds!';
+                output.textContent = 'Hello! This message appeared after 2 seconds.';
             }, 2000);
         }
 
-        // Multiple setTimeout Example
-        function startCountdown() {
-            const display = document.getElementById('countdownDisplay');
-            const output = document.getElementById('countdownOutput');
-            let count = 3;
+        // setInterval Example
+        let counterInterval;
+        let count = 0;
 
-            display.textContent = count;
-            output.textContent = 'Countdown started...';
-
-            setTimeout(() => {
-                count--;
-                display.textContent = count;
-            }, 1000);
-
-            setTimeout(() => {
-                count--;
-                display.textContent = count;
-            }, 2000);
-
-            setTimeout(() => {
-                display.textContent = 'Go!';
-                output.textContent = 'Countdown finished!';
-            }, 3000);
-
-            setTimeout(() => {
-                display.textContent = '3';
-                output.textContent = '';
-            }, 4000);
-        }
-
-        // setInterval Example - Digital Clock
-        function updateClock() {
-            const display = document.getElementById('clockDisplay');
-            const now = new Date();
-            const time = now.toLocaleTimeString();
-            display.textContent = time;
-        }
-        
-        updateClock(); // Initial call
-        setInterval(updateClock, 1000);
-
-        // Progress Bar Example
-        let progressInterval;
-        let progressValue = 0;
-
-        function startProgress() {
-            if (!progressInterval) {
-                progressValue = 0;
-                progressInterval = setInterval(() => {
-                    progressValue++;
-                    const progressBar = document.getElementById('progress');
-                    const output = document.getElementById('progressOutput');
-                    
-                    progressBar.style.width = `${progressValue}%`;
-                    output.textContent = `Progress: ${progressValue}%`;
-
-                    if (progressValue >= 100) {
-                        stopProgress();
-                        output.textContent = 'Progress complete!';
-                    }
-                }, 50);
-            }
-        }
-
-        function stopProgress() {
-            if (progressInterval) {
-                clearInterval(progressInterval);
-                progressInterval = null;
-            }
-        }
-
-        // Color Change Example
-        let colorInterval;
-        const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeead', '#d4a4eb'];
-        let colorIndex = 0;
-
-        function startColorChange() {
-            if (!colorInterval) {
-                const colorBox = document.getElementById('colorBox');
-                colorBox.style.backgroundColor = colors[0];
-                
-                colorInterval = setInterval(() => {
-                    colorIndex = (colorIndex + 1) % colors.length;
-                    colorBox.style.backgroundColor = colors[colorIndex];
+        function startCounter() {
+            if (!counterInterval) {
+                counterInterval = setInterval(() => {
+                    count++;
+                    document.getElementById('counterOutput').textContent = count;
                 }, 1000);
             }
         }
 
-        function stopColorChange() {
-            if (colorInterval) {
-                clearInterval(colorInterval);
-                colorInterval = null;
+        function stopCounter() {
+            if (counterInterval) {
+                clearInterval(counterInterval);
+                counterInterval = null;
             }
         }
-
-        // Start color change automatically
-        startColorChange();
     </script>
 </body>
 </html> 

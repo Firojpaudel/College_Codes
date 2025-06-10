@@ -3,215 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Events Examples</title>
+    <title>Simple JavaScript Events</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 600px;
+            margin: 20px auto;
             padding: 20px;
         }
 
-        .example {
-            margin: 20px 0;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .event-box {
+        .box {
             width: 200px;
             height: 100px;
-            background-color: #f0f0f0;
+            background-color: lightgray;
+            margin: 10px 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 10px 0;
             cursor: pointer;
-            transition: all 0.3s ease;
         }
 
         .output {
-            background-color: #f8f9fa;
-            padding: 10px;
             margin-top: 10px;
-            border-radius: 5px;
-            min-height: 50px;
-        }
-
-        button {
-            padding: 8px 16px;
-            margin: 5px;
-            cursor: pointer;
-        }
-
-        input {
-            padding: 5px;
-            margin: 5px;
-        }
-
-        .highlight {
-            background-color: #ffd700;
-        }
-
-        #imageBox {
-            max-width: 300px;
-            height: 200px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-        }
-
-        #imageBox img {
-            max-width: 100%;
-            max-height: 100%;
+            padding: 10px;
+            background-color: #f0f0f0;
         }
     </style>
 </head>
-<body onload="handleLoad()">
-    <h1>JavaScript Events Examples</h1>
+<body>
+    <h1>Simple JavaScript Events</h1>
 
-    <!-- onClick Event -->
-    <div class="example">
-        <h2>1. onClick Event</h2>
-        <button onclick="handleClick()">Click Me</button>
-        <div id="clickOutput" class="output"></div>
+    <!-- Click Event -->
+    <h3>1. Click Event</h3>
+    <button onclick="showMessage('You clicked the button!')">Click Me</button>
+    
+    <!-- Mouse Events -->
+    <h3>2. Mouse Events</h3>
+    <div class="box" 
+         onmouseover="this.style.backgroundColor='yellow'" 
+         onmouseout="this.style.backgroundColor='lightgray'">
+        Hover over me
     </div>
 
-    <!-- onMouseOver and onMouseOut Events -->
-    <div class="example">
-        <h2>2. onMouseOver and onMouseOut Events</h2>
-        <div class="event-box" 
-             onmouseover="handleMouseOver(this)" 
-             onmouseout="handleMouseOut(this)">
-            Hover over me
-        </div>
-    </div>
+    <!-- Keyboard Events -->
+    <h3>3. Keyboard Event</h3>
+    <input type="text" 
+           onkeyup="document.getElementById('keyOutput').textContent = 'You typed: ' + this.value" 
+           placeholder="Type something...">
+    <div id="keyOutput" class="output"></div>
 
-    <!-- onKeyDown and onKeyUp Events -->
-    <div class="example">
-        <h2>3. onKeyDown and onKeyUp Events</h2>
-        <input type="text" 
-               onkeydown="handleKeyDown(event)" 
-               onkeyup="handleKeyUp(event)" 
-               placeholder="Type something...">
-        <div id="keyOutput" class="output"></div>
-    </div>
-
-    <!-- onFocus and onBlur Events -->
-    <div class="example">
-        <h2>4. onFocus and onBlur Events</h2>
-        <input type="text" 
-               onfocus="handleFocus(this)" 
-               onblur="handleBlur(this)" 
-               placeholder="Click here...">
-    </div>
-
-    <!-- onSubmit Event -->
-    <div class="example">
-        <h2>5. onSubmit Event</h2>
-        <form onsubmit="handleSubmit(event)">
-            <input type="text" name="username" placeholder="Username" required>
-            <button type="submit">Submit</button>
-        </form>
-        <div id="submitOutput" class="output"></div>
-    </div>
-
-    <!-- onChange Event -->
-    <div class="example">
-        <h2>6. onChange Event</h2>
-        <select onchange="handleChange(this)">
-            <option value="">Select an option</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-        </select>
-        <div id="changeOutput" class="output"></div>
-    </div>
-
-    <!-- onLoad Event (for images) -->
-    <div class="example">
-        <h2>7. onLoad Event (Image)</h2>
-        <div id="imageBox">
-            <img src="https://via.placeholder.com/300x200" 
-                 alt="Sample Image" 
-                 onload="handleImageLoad()"
-                 onerror="handleImageError()">
-        </div>
-        <div id="imageOutput" class="output"></div>
-    </div>
+    <!-- Form Event -->
+    <h3>4. Form Event</h3>
+    <form onsubmit="handleForm(event)">
+        <input type="text" placeholder="Enter your name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="formOutput" class="output"></div>
 
     <script>
-        // onLoad Event Handler
-        function handleLoad() {
-            console.log('Page loaded successfully!');
+        function showMessage(message) {
+            alert(message);
         }
 
-        // onClick Event Handler
-        let clickCount = 0;
-        function handleClick() {
-            clickCount++;
-            document.getElementById('clickOutput').textContent = 
-                `Button clicked ${clickCount} time${clickCount === 1 ? '' : 's'}!`;
-        }
-
-        // onMouseOver and onMouseOut Event Handlers
-        function handleMouseOver(element) {
-            element.style.backgroundColor = '#ffd700';
-            element.textContent = 'Mouse is over me!';
-        }
-
-        function handleMouseOut(element) {
-            element.style.backgroundColor = '#f0f0f0';
-            element.textContent = 'Hover over me';
-        }
-
-        // onKeyDown and onKeyUp Event Handlers
-        function handleKeyDown(event) {
-            document.getElementById('keyOutput').textContent = 
-                `Key pressed: ${event.key} (Code: ${event.keyCode})`;
-        }
-
-        function handleKeyUp(event) {
-            document.getElementById('keyOutput').textContent += 
-                '\nKey released!';
-        }
-
-        // onFocus and onBlur Event Handlers
-        function handleFocus(element) {
-            element.style.backgroundColor = '#e8f5e9';
-        }
-
-        function handleBlur(element) {
-            element.style.backgroundColor = '';
-        }
-
-        // onSubmit Event Handler
-        function handleSubmit(event) {
+        function handleForm(event) {
             event.preventDefault();
-            const username = event.target.username.value;
-            document.getElementById('submitOutput').textContent = 
-                `Form submitted with username: ${username}`;
-        }
-
-        // onChange Event Handler
-        function handleChange(element) {
-            document.getElementById('changeOutput').textContent = 
-                `Selected option: ${element.value}`;
-        }
-
-        // Image onLoad and onError Event Handlers
-        function handleImageLoad() {
-            document.getElementById('imageOutput').textContent = 
-                'Image loaded successfully!';
-        }
-
-        function handleImageError() {
-            document.getElementById('imageOutput').textContent = 
-                'Error loading image!';
+            const name = event.target[0].value;
+            document.getElementById('formOutput').textContent = 'Hello, ' + name + '!';
         }
     </script>
 </body>

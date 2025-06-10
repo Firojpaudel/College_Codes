@@ -3,42 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Loops Examples</title>
+    <title>JavaScript Loops</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 600px;
+            margin: 20px auto;
             padding: 20px;
         }
-
         .example {
             margin: 20px 0;
-            padding: 20px;
+            padding: 10px;
             border: 1px solid #ddd;
-            border-radius: 5px;
         }
-
         .output {
             background-color: #f8f9fa;
             padding: 10px;
             margin-top: 10px;
-            border-radius: 5px;
-            white-space: pre-wrap;
             font-family: monospace;
         }
-
         button {
-            padding: 8px 16px;
+            padding: 5px 10px;
             margin: 5px;
-            cursor: pointer;
-        }
-
-        input {
-            padding: 5px;
-            margin: 5px;
-            width: 60px;
         }
     </style>
 </head>
@@ -48,147 +34,58 @@
     <!-- For Loop Example -->
     <div class="example">
         <h2>1. For Loop</h2>
-        <p>Generate multiplication table:</p>
-        <input type="number" id="multiplicationNumber" value="5" min="1" max="20">
-        <button onclick="generateMultiplicationTable()">Generate</button>
-        <div id="multiplicationOutput" class="output"></div>
+        <p>Multiplication table for 5:</p>
+        <button onclick="showMultiplicationTable()">Show Table</button>
+        <div id="forOutput" class="output"></div>
     </div>
 
     <!-- While Loop Example -->
     <div class="example">
         <h2>2. While Loop</h2>
-        <p>Count down from:</p>
-        <input type="number" id="countdownNumber" value="10" min="1" max="100">
-        <button onclick="startCountdown()">Start Countdown</button>
-        <div id="countdownOutput" class="output"></div>
+        <p>Countdown from 5:</p>
+        <button onclick="showCountdown()">Start Countdown</button>
+        <div id="whileOutput" class="output"></div>
     </div>
 
-    <!-- Do...While Loop Example -->
+    <!-- Do While Loop Example -->
     <div class="example">
-        <h2>3. Do...While Loop</h2>
-        <p>Generate random numbers until getting one greater than 0.8:</p>
-        <button onclick="generateRandomNumbers()">Generate</button>
-        <div id="randomOutput" class="output"></div>
-    </div>
-
-    <!-- Nested Loops Example 1 -->
-    <div class="example">
-        <h2>4. Nested Loops - Pattern</h2>
-        <p>Generate star pattern:</p>
-        <input type="number" id="patternRows" value="5" min="1" max="10">
-        <button onclick="generatePattern()">Generate Pattern</button>
-        <div id="patternOutput" class="output"></div>
-    </div>
-
-    <!-- Nested Loops Example 2 -->
-    <div class="example">
-        <h2>5. Nested Loops - Multiplication Grid</h2>
-        <p>Generate multiplication grid:</p>
-        <input type="number" id="gridSize" value="5" min="1" max="10">
-        <button onclick="generateMultiplicationGrid()">Generate Grid</button>
-        <div id="gridOutput" class="output"></div>
+        <h2>3. Do While Loop</h2>
+        <p>Count until reaching 5:</p>
+        <button onclick="showDoWhile()">Start Counting</button>
+        <div id="doWhileOutput" class="output"></div>
     </div>
 
     <script>
         // For Loop Example
-        function generateMultiplicationTable() {
-            const number = parseInt(document.getElementById('multiplicationNumber').value);
-            const output = document.getElementById('multiplicationOutput');
-            let table = '';
-
-            for (let i = 1; i <= 10; i++) {
-                table += `${number} × ${i} = ${number * i}\n`;
+        function showMultiplicationTable() {
+            let output = '';
+            for (let i = 1; i <= 5; i++) {
+                output += `5 × ${i} = ${5 * i}\n`;
             }
-
-            output.textContent = table;
+            document.getElementById('forOutput').textContent = output;
         }
 
         // While Loop Example
-        function startCountdown() {
-            const start = parseInt(document.getElementById('countdownNumber').value);
-            const output = document.getElementById('countdownOutput');
-            let countdown = '';
-            let current = start;
-
-            while (current >= 0) {
-                countdown += `${current}${current > 0 ? ', ' : ''}`
-                current--;
+        function showCountdown() {
+            let count = 5;
+            let output = '';
+            while (count >= 0) {
+                output += count + (count > 0 ? ', ' : '');
+                count--;
             }
-
-            output.textContent = countdown + '\nBlast off! 🚀';
+            document.getElementById('whileOutput').textContent = output;
         }
 
-        // Do...While Loop Example
-        function generateRandomNumbers() {
-            const output = document.getElementById('randomOutput');
-            let numbers = '';
+        // Do While Loop Example
+        function showDoWhile() {
             let count = 1;
-            let randomNum;
-
+            let output = '';
             do {
-                randomNum = Math.random();
-                numbers += `Try ${count}: ${randomNum.toFixed(4)}\n`;
+                output += `Count: ${count}\n`;
                 count++;
-            } while (randomNum <= 0.8);
-
-            output.textContent = numbers + `\nFound number > 0.8 after ${count - 1} tries!`;
+            } while (count <= 5);
+            document.getElementById('doWhileOutput').textContent = output;
         }
-
-        // Nested Loops Example 1 - Pattern
-        function generatePattern() {
-            const rows = parseInt(document.getElementById('patternRows').value);
-            const output = document.getElementById('patternOutput');
-            let pattern = '';
-
-            for (let i = 1; i <= rows; i++) {
-                // Add spaces
-                for (let j = 1; j <= rows - i; j++) {
-                    pattern += ' ';
-                }
-                // Add stars
-                for (let k = 1; k <= 2 * i - 1; k++) {
-                    pattern += '*';
-                }
-                pattern += '\n';
-            }
-
-            output.textContent = pattern;
-        }
-
-        // Nested Loops Example 2 - Multiplication Grid
-        function generateMultiplicationGrid() {
-            const size = parseInt(document.getElementById('gridSize').value);
-            const output = document.getElementById('gridOutput');
-            let grid = '';
-
-            // Header row
-            grid += '   ';
-            for (let i = 1; i <= size; i++) {
-                grid += i.toString().padStart(4);
-            }
-            grid += '\n   ';
-            for (let i = 1; i <= size; i++) {
-                grid += '----';
-            }
-            grid += '\n';
-
-            // Grid content
-            for (let i = 1; i <= size; i++) {
-                grid += i.toString().padStart(2) + '|';
-                for (let j = 1; j <= size; j++) {
-                    grid += (i * j).toString().padStart(4);
-                }
-                grid += '\n';
-            }
-
-            output.textContent = grid;
-        }
-
-        // Initialize with default values
-        generateMultiplicationTable();
-        startCountdown();
-        generatePattern();
-        generateMultiplicationGrid();
     </script>
 </body>
 </html> 
