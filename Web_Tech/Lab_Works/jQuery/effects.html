@@ -3,233 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery Effects Examples</title>
+    <title>Basic jQuery Effects</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .example {
-            margin: 20px 0;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
         }
 
         .box {
-            width: 200px;
-            height: 100px;
+            width: 150px;
+            height: 80px;
             background-color: #3498db;
             margin: 10px 0;
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: bold;
-        }
-
-        .controls {
-            margin: 10px 0;
         }
 
         button {
-            padding: 8px 16px;
             margin: 5px;
-            cursor: pointer;
-            background-color: #2ecc71;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            padding: 5px 10px;
         }
 
-        button:hover {
-            background-color: #27ae60;
-        }
-
-        .speed-control {
-            margin: 10px 0;
-        }
-
-        select {
-            padding: 5px;
-            margin-left: 10px;
-        }
-
-        .panel {
-            padding: 20px;
-            display: none;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            margin-top: 10px;
+        .effect-group {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>jQuery Effects Examples</h1>
+    <h1>Basic jQuery Effects</h1>
 
     <!-- Show/Hide Effects -->
-    <div class="example">
-        <h2>Show/Hide Effects</h2>
-        <div class="box" id="showHideBox">Content</div>
-        <div class="controls">
-            <button onclick="showBox()">Show</button>
-            <button onclick="hideBox()">Hide</button>
-            <button onclick="toggleBox()">Toggle</button>
-        </div>
-        <div class="speed-control">
-            <label>Speed:</label>
-            <select id="showHideSpeed">
-                <option value="fast">Fast</option>
-                <option value="slow">Slow</option>
-                <option value="2000">2 Seconds</option>
-            </select>
-        </div>
+    <div class="effect-group">
+        <h3>Show/Hide Effects</h3>
+        <div class="box" id="showHideBox">Box 1</div>
+        <button onclick="$('#showHideBox').hide('slow')">Hide</button>
+        <button onclick="$('#showHideBox').show('slow')">Show</button>
     </div>
 
     <!-- Fade Effects -->
-    <div class="example">
-        <h2>Fade Effects</h2>
-        <div class="box" id="fadeBox">Fade Content</div>
-        <div class="controls">
-            <button onclick="fadeIn()">Fade In</button>
-            <button onclick="fadeOut()">Fade Out</button>
-            <button onclick="fadeToggle()">Fade Toggle</button>
-            <button onclick="fadeTo()">Fade To 50%</button>
-        </div>
+    <div class="effect-group">
+        <h3>Fade Effects</h3>
+        <div class="box" id="fadeBox">Box 2</div>
+        <button onclick="$('#fadeBox').fadeOut('slow')">Fade Out</button>
+        <button onclick="$('#fadeBox').fadeIn('slow')">Fade In</button>
     </div>
 
     <!-- Slide Effects -->
-    <div class="example">
-        <h2>Slide Effects</h2>
-        <div class="box" id="slideBox">Slide Content</div>
-        <div class="controls">
-            <button onclick="slideDown()">Slide Down</button>
-            <button onclick="slideUp()">Slide Up</button>
-            <button onclick="slideToggle()">Slide Toggle</button>
-        </div>
-    </div>
-
-    <!-- Animation Effects -->
-    <div class="example">
-        <h2>Animation Effects</h2>
-        <div class="box" id="animateBox">Animate Me</div>
-        <div class="controls">
-            <button onclick="moveRight()">Move Right</button>
-            <button onclick="moveBack()">Move Back</button>
-            <button onclick="multipleProperties()">Multiple Properties</button>
-            <button onclick="resetAnimation()">Reset</button>
-        </div>
-    </div>
-
-    <!-- Chaining Effects -->
-    <div class="example">
-        <h2>Chaining Effects</h2>
-        <div class="box" id="chainBox">Chain Effects</div>
-        <div class="controls">
-            <button onclick="chainEffects()">Start Chain</button>
-            <button onclick="resetChain()">Reset</button>
-        </div>
+    <div class="effect-group">
+        <h3>Slide Effects</h3>
+        <div class="box" id="slideBox">Box 3</div>
+        <button onclick="$('#slideBox').slideUp('slow')">Slide Up</button>
+        <button onclick="$('#slideBox').slideDown('slow')">Slide Down</button>
     </div>
 
     <script>
-        // Show/Hide Effects
-        function showBox() {
-            const speed = $('#showHideSpeed').val();
-            $('#showHideBox').show(speed);
-        }
-
-        function hideBox() {
-            const speed = $('#showHideSpeed').val();
-            $('#showHideBox').hide(speed);
-        }
-
-        function toggleBox() {
-            const speed = $('#showHideSpeed').val();
-            $('#showHideBox').toggle(speed);
-        }
-
-        // Fade Effects
-        function fadeIn() {
-            $('#fadeBox').fadeIn('slow');
-        }
-
-        function fadeOut() {
-            $('#fadeBox').fadeOut('slow');
-        }
-
-        function fadeToggle() {
-            $('#fadeBox').fadeToggle('slow');
-        }
-
-        function fadeTo() {
-            $('#fadeBox').fadeTo('slow', 0.5);
-        }
-
-        // Slide Effects
-        function slideDown() {
-            $('#slideBox').slideDown('slow');
-        }
-
-        function slideUp() {
-            $('#slideBox').slideUp('slow');
-        }
-
-        function slideToggle() {
-            $('#slideBox').slideToggle('slow');
-        }
-
-        // Animation Effects
-        function moveRight() {
-            $('#animateBox').animate({
-                marginLeft: '200px'
-            }, 'slow');
-        }
-
-        function moveBack() {
-            $('#animateBox').animate({
-                marginLeft: '0px'
-            }, 'slow');
-        }
-
-        function multipleProperties() {
-            $('#animateBox').animate({
-                width: '300px',
-                height: '150px',
-                opacity: 0.5
-            }, 'slow');
-        }
-
-        function resetAnimation() {
-            $('#animateBox').animate({
-                width: '200px',
-                height: '100px',
-                marginLeft: '0px',
-                opacity: 1
-            }, 'slow');
-        }
-
-        // Chaining Effects
-        function chainEffects() {
-            $('#chainBox')
-                .slideUp('slow')
-                .slideDown('slow')
-                .fadeOut('slow')
-                .fadeIn('slow')
-                .animate({ marginLeft: '200px' }, 'slow')
-                .animate({ marginLeft: '0px' }, 'slow');
-        }
-
-        function resetChain() {
-            $('#chainBox').stop(true).removeAttr('style');
-        }
-
-        // Initialize - ensure all boxes are visible
+        // Ensure all boxes are visible on page load
         $(document).ready(function() {
             $('.box').show();
         });
