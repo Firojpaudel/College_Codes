@@ -264,13 +264,15 @@ $ git clone https://github.com/Firojpaudel/College_Codes.git
 <details>
 <summary><b>12. Simulation</b></summary>
 
-- [Lab Work 1](./Simulation/lab_work1.cpp)
-- [Lab Work 2](./Simulation/lab_work2.cpp)
-- [Lab Work 3](./Simulation/lab_work3.cpp)
-- [Lab Work 4](./Simulation/lab_work4.cpp)
-- [Lab Work 5](./Simulation/lab_work5.cpp)
-- [Lab Work 6A](./Simulation/lab_work6_a.cpp)
-- [Lab Work 6B](./Simulation/lab_work6_b.cpp)
+- [Lab Work 1](./Simulation/Codes/lab_work1.cpp)
+- [Lab Work 2](./Simulation/Codes/lab_work2.cpp)
+- [Lab Work 3](./Simulation/Codes/lab_work3.cpp)
+- [Lab Work 4](./Simulation/Codes/lab_work4.cpp)
+- [Lab Work 5](./Simulation/Codes/lab_work5.cpp)
+- [Lab Work 6A](./Simulation/Codes/lab_work6_a.cpp)
+- [Lab Work 6B](./Simulation/Codes/lab_work6_b.cpp)
+- [Simulation Practicals Report (PDF)](./Simulation/Report/Simulation_practicals.pdf)
+
 </details>
 
 <details>
