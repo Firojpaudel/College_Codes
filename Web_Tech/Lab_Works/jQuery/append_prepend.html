@@ -2,107 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery Append and Prepend Demo</title>
+    <title>Append/Prepend Demo</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .container {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin: 10px 0;
-        }
-        button {
-            padding: 8px 15px;
-            margin: 5px;
-            cursor: pointer;
-        }
-        .highlight {
-            background-color: #ffeb3b;
-            padding: 2px 5px;
-        }
+        body { font-family: Arial; max-width: 500px; margin: 30px auto; }
+        div { border:1px solid #ccc; margin:10px 0; padding:10px; }
+        .h { background:#ffeb3b; }
+        button { margin:2px; }
     </style>
 </head>
 <body>
-    <h1>jQuery Append and Prepend Functions Demo</h1>
+    <h2>Append/Prepend Demo</h2>
 
-    <div class="container" id="text-demo">
-        <h2>Text Manipulation</h2>
-        <p>This is the original paragraph.</p>
-        <button onclick="appendText()">Append Text</button>
-        <button onclick="prependText()">Prepend Text</button>
+    <div>
+        <p id="txt">Text</p>
+        <button>Append</button><button>Prepend</button>
     </div>
-
-    <div class="container" id="list-demo">
-        <h2>List Manipulation</h2>
-        <ul id="myList">
-            <li>Original Item 1</li>
-            <li>Original Item 2</li>
-        </ul>
-        <button onclick="appendListItem()">Append List Item</button>
-        <button onclick="prependListItem()">Prepend List Item</button>
+    <div>
+        <ul id="lst"><li>Item</li></ul>
+        <button>Append</button><button>Prepend</button>
     </div>
-
-    <div class="container" id="element-demo">
-        <h2>Element Manipulation</h2>
-        <div id="content">
-            <p>Main content here</p>
-        </div>
-        <button onclick="appendElement()">Append Element</button>
-        <button onclick="prependElement()">Prepend Element</button>
+    <div>
+        <div id="blk"><p>Block</p></div>
+        <button>Append</button><button>Prepend</button>
     </div>
 
     <script>
-        let textCounter = 1;
-        let listCounter = 1;
-        let elementCounter = 1;
-
-        function appendText() {
-            $("#text-demo p").append(
-                `<span class="highlight"> [Appended Text ${textCounter++}]</span>`
-            );
-        }
-
-        function prependText() {
-            $("#text-demo p").prepend(
-                `<span class="highlight">[Prepended Text ${textCounter++}] </span>`
-            );
-        }
-
-        function appendListItem() {
-            $("#myList").append(
-                `<li>Appended Item ${listCounter++}</li>`
-            );
-        }
-
-        function prependListItem() {
-            $("#myList").prepend(
-                `<li>Prepended Item ${listCounter++}</li>`
-            );
-        }
-
-        function appendElement() {
-            $("#content").append(
-                `<div class="highlight">
-                    <p>Appended Element ${elementCounter++}</p>
-                    <small>Added at: ${new Date().toLocaleTimeString()}</small>
-                </div>`
-            );
-        }
-
-        function prependElement() {
-            $("#content").prepend(
-                `<div class="highlight">
-                    <p>Prepended Element ${elementCounter++}</p>
-                    <small>Added at: ${new Date().toLocaleTimeString()}</small>
-                </div>`
-            );
-        }
+        let n=1;
+        $('div').has('button').each(function(idx){
+            let $div=$(this);
+            $div.find('button').eq(0).click(function(){
+                if(idx===0) $('#txt').append(`<span class='h'>[${n++}]</span>`);
+                if(idx===1) $('#lst').append(`<li>Item ${n++}</li>`);
+                if(idx===2) $('#blk').append(`<div class='h'><p>Block ${n++}</p></div>`);
+            });
+            $div.find('button').eq(1).click(function(){
+                if(idx===0) $('#txt').prepend(`<span class='h'>[${n++}]</span>`);
+                if(idx===1) $('#lst').prepend(`<li>Item ${n++}</li>`);
+                if(idx===2) $('#blk').prepend(`<div class='h'><p>Block ${n++}</p></div>`);
+            });
+        });
     </script>
 </body>
 </html> 
