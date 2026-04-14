@@ -27,10 +27,13 @@
     <td><b>CA</b></td>
     <td><b>CG</b></td>
     <td><b>CN</b></td>
+    <td><b>Compiler</b></td>
     <td><b>Crypto</b></td>
     <td><b>DAA</b></td>
     <td><b>DBMS</b></td>
+    <td><b>DotNet</b></td>
     <td><b>DSA</b></td>
+    <td><b>Java</b></td>
     <td><b>NM</b></td>
     <td><b>OS</b></td>
     <td><b>SAD</b></td>
@@ -55,7 +58,28 @@ $ git clone https://github.com/Firojpaudel/College_Codes.git
 ## 🗂️ Subjects & Lab Reports
 
 <details>
-<summary><b>1. Artificial Intelligence</b></summary>
+<summary><b>1. Java Programming</b></summary>
+
+- [Full Java Lab Directory](./Java/)
+- [StudentRecordAnalysis: Marks Processing](./Java/Unit_1/StudentRecordAnalysis.java)
+- [WordSortDemo: Manual Alphabetical Sort](./Java/Unit_1/WordSortDemo.java)
+- [WordReplaceDemo: Interactive Text Replacement](./Java/Unit_1/WordReplaceDemo.java)
+- [FileCompareDemo: Byte-by-byte comparison](./Java/Unit_1/FileCompareDemo.java)
+- [RaceConditionDemo: Thread Synchronization](./Java/Unit_1/RaceConditionDemo.java)
+</details>
+
+<details>
+<summary><b>2. .Net Centric Computing</b></summary>
+
+- [Standard Date and Time Format Specifiers](./DotNet/Lab11.cs)
+- [Static & Dynamic Polymorphism](./DotNet/Lab17/)
+- [Synchronous & Asynchronous Programming](./DotNet/Lab18/)
+- [Detailed Exception Handling Implementation](./DotNet/Lab19/)
+- [Full .Net Directory](./DotNet/README.md)
+</details>
+
+<details>
+<summary><b>3. Artificial Intelligence</b></summary>
 
 - [ChatBot (Rule Based)](./AI/chatbot.py)
 - [Tower Of Hanoi Implementation](./AI/Tower_of_hanoi.py)
