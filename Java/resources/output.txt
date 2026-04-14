@@ -1,0 +1,2 @@
+This is a test file for the byte stream copy demonstration.
+Java File I/O is powerful and simple!
