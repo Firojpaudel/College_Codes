@@ -10,7 +10,7 @@ if (-not (Test-Path "class")) {
 
 # Compile the specific file
 Write-Host "Compiling $FilePath..." -ForegroundColor Cyan
-javac -cp class -d class $FilePath
+javac -cp "class;lib/*" -d class $FilePath
 
 if ($LASTEXITCODE -eq 0) {
     # Normalize path: remove leading .\ or ./ and convert to dots
@@ -21,7 +21,7 @@ if ($LASTEXITCODE -eq 0) {
     $content = Get-Content $FilePath -Raw
     if ($content -match "public\s+static\s+void\s+main") {
         Write-Host "Running $className...`n" -ForegroundColor Green
-        java -cp class $className
+        java -cp "class;lib/*" $className
     } else {
         Write-Host "`nCompilation successful. No main method found in $className (Skipping execution)." -ForegroundColor Yellow
     }
