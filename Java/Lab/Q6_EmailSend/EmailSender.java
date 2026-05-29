@@ -1,13 +1,17 @@
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.mail.*;
 import javax.mail.internet.*;
 
 public class EmailSender {
+    private static final Logger logger = Logger.getLogger(EmailSender.class.getName());
+
     public static void main(String[] args) {
-        String to = "receiver@example.com";
-        String from = "your-email@example.com";
-        final String username = "your-email@example.com";
-        final String password = "your-app-password"; // Use App Password if Gmail
+        String to = "ujjwalpuri221@gmail.com";
+        String from = "firoj7902@mbmcsit.edu.np";
+        final String username = "firoj7902@mbmcsit.edu.np";
+        final String password = "bufk rizn dtlz viia"; 
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -22,17 +26,24 @@ public class EmailSender {
         });
 
         try {
+            logger.info("Preparing to send email to " + to + "...");
+            
+            String emailSubject = "Test Email Subject";
+            String emailBody = "This is a test message body sent via JavaMail.";
+            
+            logger.info("Subject: " + emailSubject);
+            logger.info("Content: " + emailBody);
+
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(from));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
-            message.setSubject("Test Email Subject");
-            message.setText("This is a test message body sent via JavaMail.");
+            message.setSubject(emailSubject);
+            message.setText(emailBody);
 
             Transport.send(message);
-            System.out.println("Email Sent Successfully!");
+            logger.info("Email Sent Successfully to " + to + "!");
         } catch (MessagingException e) {
-            System.out.println("Failed to send email.");
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Failed to send email.", e);
         }
     }
 }

@@ -2,6 +2,69 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "EmailSender",
+      "request": "launch",
+      "mainClass": "EmailSender",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
+      "type": "java",
+      "name": "URLAnalyzer",
+      "request": "launch",
+      "mainClass": "URLAnalyzer",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
+      "type": "java",
+      "name": "FileClient",
+      "request": "launch",
+      "mainClass": "FileClient",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
+      "type": "java",
+      "name": "FileServer",
+      "request": "launch",
+      "mainClass": "FileServer",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
+      "type": "java",
+      "name": "UDPClient",
+      "request": "launch",
+      "mainClass": "UDPClient",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
+      "type": "java",
+      "name": "UDPServer",
+      "request": "launch",
+      "mainClass": "UDPServer",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
+      "type": "java",
+      "name": "TCPServer",
+      "request": "launch",
+      "mainClass": "TCPServer",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
+      "type": "java",
+      "name": "TCPClient",
+      "request": "launch",
+      "mainClass": "TCPClient",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
+      "type": "java",
+      "name": "StudentRegistrationApp",
+      "request": "launch",
+      "mainClass": "StudentRegistrationApp",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
