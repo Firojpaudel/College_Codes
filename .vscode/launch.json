@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "EmailReader",
+      "request": "launch",
+      "mainClass": "EmailReader",
+      "projectName": "Java_project_39f81cfb"
+    },
+    {
+      "type": "java",
       "name": "EmailSender",
       "request": "launch",
       "mainClass": "EmailSender",

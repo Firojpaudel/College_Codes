@@ -1,10 +1,14 @@
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.mail.*;
 
 public class EmailReader {
+    private static final Logger logger = Logger.getLogger(EmailReader.class.getName());
+
     public static void main(String[] args) {
-        final String username = "your-email@example.com";
-        final String password = "your-app-password";
+        final String username = "firoj7902@mbmcsit.edu.np";
+        final String password = "xxxx xxxx xxxx xxxx";
 
         Properties props = new Properties();
         props.put("mail.store.protocol", "imaps");
@@ -23,19 +27,19 @@ public class EmailReader {
             int total = messages.length;
             int start = Math.max(0, total - 5);
 
-            System.out.println("Reading top 5 latest emails...");
+            logger.info("Reading top " + (total - start) + " latest emails...");
             for (int i = total - 1; i >= start; i--) {
                 Message msg = messages[i];
-                System.out.println("---------------------------------");
-                System.out.println("From: " + msg.getFrom()[0]);
-                System.out.println("Subject: " + msg.getSubject());
-                System.out.println("Date: " + msg.getSentDate());
+                logger.info("---------------------------------");
+                logger.info("From: " + msg.getFrom()[0]);
+                logger.info("Subject: " + msg.getSubject());
+                logger.info("Date: " + msg.getSentDate());
             }
 
             inbox.close(false);
             store.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "An error occurred while reading emails.", e);
         }
     }
 }
