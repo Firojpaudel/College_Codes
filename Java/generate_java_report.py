@@ -47,7 +47,7 @@ def find_file_and_run(code_text):
     if not match:
         match = re.search(r'class\s+([a-zA-Z0-9_]+)', code_text)
     if not match:
-        return "No class declaration found in code block."
+        return "[No class declaration found in code block.]"
         
     class_name = match.group(1)
     
@@ -59,7 +59,7 @@ def find_file_and_run(code_text):
         
     full_class_name = package_prefix + class_name
     
-    # Determine if it's a GUI/Web/Network task
+    # Check if this is a GUI/Web/Network task
     is_gui_or_web = False
     for indicator in ["javax.swing", "javafx", "javax.servlet", "java.rmi", "ServerSocket", "Socket", "DatagramSocket", "DriverManager.getConnection"]:
         if indicator in code_text:
@@ -74,7 +74,12 @@ def find_file_and_run(code_text):
                 if f == f"{class_name}.java":
                     rel_folder = os.path.relpath(dirpath, "C:/Users/firoj/OneDrive/Desktop/Codes practice/College_Codes")
                     break
-        return f"[GUI / Web / Network Task: Please run this task manually in your environment by navigating to '{rel_folder.replace(chr(92), '/')}' and executing the program or deploy.ps1 script.]"
+        clean_rel_folder = rel_folder.replace(chr(92), '/').replace("firoj", "student").replace("Firoj", "Student")
+        return f"[GUI / Web / Network Task: Run manually using the setup_and_run_labs.ps1 script, or via deploy.ps1 in '{clean_rel_folder}'.]"
+
+    # Verify if class has a main method
+    if "public static void main" not in code_text:
+        return f"[Helper Class: Implemented as a component of other executable classes. No direct main method.]"
 
     # Search for the source file
     java_root = "C:/Users/firoj/OneDrive/Desktop/Codes practice/College_Codes/Java"
@@ -90,7 +95,7 @@ def find_file_and_run(code_text):
             break
             
     if not found_path:
-        return f"[Source file {class_name}.java not found in workspace. Run manually.]"
+        return f"[Source file {class_name}.java not found in workspace.]"
         
     # Compile
     out_dir = "C:/Users/firoj/OneDrive/Desktop/Codes practice/College_Codes/Java/class"
@@ -109,6 +114,8 @@ def find_file_and_run(code_text):
         output_data = res.stdout
         if res.stderr:
             output_data += "\n" + res.stderr
+        # Clean personal details
+        output_data = output_data.replace("firoj", "student").replace("Firoj", "Student")
         return output_data.strip()
     except subprocess.TimeoutExpired:
         return "[Execution timed out (infinite loop or waiting for input).]"
@@ -167,8 +174,6 @@ def main():
             run.font.name = "Times New Roman"
             run.font.size = Pt(12)
             
-            # Print the actual run output dynamically
-            print("Running code block to capture stdout...")
             code_text = "\n".join(code_lines)
             captured_output = find_file_and_run(code_text)
             
