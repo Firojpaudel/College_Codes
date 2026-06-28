@@ -13,9 +13,17 @@ public class BasicServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         System.out.println("Processing request in service()...");
+        
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.println("<html><body><h1>Basic Servlet Lifecycle Example</h1></body></html>");
+        
+        out.println("<html>");
+        out.println("<body>");
+        out.println("<h1>Basic Servlet Lifecycle Example</h1>");
+        out.println("<p>Servlet initialized and service() method called successfully.</p>");
+        out.println("<p>Client IP Address: " + request.getRemoteAddr() + "</p>");
+        out.println("</body>");
+        out.println("</html>");
     }
     
     @Override

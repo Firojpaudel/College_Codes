@@ -5,6 +5,13 @@ import javax.servlet.http.*;
 public class LoginServlet extends HttpServlet {
     
     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        // Forward GET request to show the login.html form
+        request.getRequestDispatcher("login.html").forward(request, response);
+    }
+    
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         String user = request.getParameter("username");
@@ -13,11 +20,14 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         
+        out.println("<html><body>");
         if("admin".equals(user) && "admin123".equals(pass)) {
             out.println("<h2 style='color:green'>Login Successful!</h2>");
             out.println("<p>Welcome, " + user + "</p>");
         } else {
             out.println("<h2 style='color:red'>Login Failed! Invalid username or password.</h2>");
+            out.println("<p><a href='LoginServlet'>Try Again</a></p>");
         }
+        out.println("</body></html>");
     }
 }
