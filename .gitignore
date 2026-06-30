@@ -1,3 +1,14 @@
 *.exe
 tempCodeRunnerFile.py
 .venv/
+*.class
+*.docx
+*.png
+*.ser
+*.dat
+output.txt
+replaced_output.txt
+temp/
+__pycache__/
+.pytest_cache/
+.venv/

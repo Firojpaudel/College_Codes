@@ -50,6 +50,8 @@ def main():
     plt.colorbar(scatter, ax=ax, label='Class Label')
     plt.grid(True, linestyle=":", alpha=0.4)
     plt.tight_layout()
+    plt.savefig("svm_plot.png")
+    print("[INFO] Plot saved as 'svm_plot.png'")
     plt.show()
 
 if __name__ == "__main__":

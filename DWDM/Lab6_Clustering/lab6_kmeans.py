@@ -63,6 +63,8 @@ def main():
     plt.legend()
     plt.grid(True, linestyle=":", alpha=0.5)
     plt.tight_layout()
+    plt.savefig("kmeans_plot.png")
+    print("[INFO] Plot saved as 'kmeans_plot.png'")
     plt.show()
 
 if __name__ == "__main__":
